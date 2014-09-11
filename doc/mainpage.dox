@@ -1,0 +1,278 @@
+/**
+@mainpage LpcmRec Main Page
+
+\tableofcontents
+
+\section intro Introduction
+
+This package (Local Principal Curve Methods for REConstruction)
+is a C<sup>++</sup> implementation of the local principal 
+curve (Lpc) algorithm described in 
+<a href="http://link.springer.com/article/10.1140/epjc/s10052-014-2832-4">
+Eur. Phys. J. C (2014) 74:2832</a>,
+also available on the <a href="http://arxiv.org/abs/1312.6059">arXiv</a>.
+It is based on the <a href="http://www.r-project.org">R-code</a> package 
+<a href=http://cran.r-project.org/web/packages/LPCM/index.html>LPCM</a>
+written by Jochen Einbeck and Ludger Evers.
+
+The aim of the code is to find local principal curve(s) for a given
+set of data points in N-dimensions (usually, N = 3); each Lpc 
+point represents the local mean of the data around this point. 
+The code can be also be used to find feature points along the curves 
+(i.e. when they rapidly change direction), which can then
+be used to "cluster" the data points into regions of interest.
+Even though the code was originally developed to study
+reconstruction techniques for liquid argon detectors, this software 
+can be used to find local principal curves for any N-dimensional 
+"point cloud" dataset.
+
+The code history of the package can be seen \link history here\endlink.
+
+\section logic Code logic
+
+The main program procedural logic can be seen in the LpcRun::run() function.
+
+Each set of data points is called an "event" and is represented by 
+the LpcEvent class. Each event has an index label number and contains a 
+LpcHitCollection of data points. This collection defines the number of 
+spatial dimensions of each point (the default is for 3D) and contains a list 
+of data points which are represented as LpcHit pointers. Each LpcHit 
+contains the data point index number, its N-dimensional co-ordinates, 
+stored internally as an Eigen::VectorXd object, and its weight (such as its
+corresponding charge or energy). Note that if all weights are set to one,
+then all data points are considered equally. Conversely, a weight of zero 
+means that the given point will be ignored. The LpcEvent owns
+the LpcHitCollection and its list of LpcHit pointers. The co-ordinates
+of the hits are scaled by their range.
+
+The LpcProcess class defines the processing sequence for each LpcEvent.
+The LpcProcess::reconstruct() function takes a LpcEvent pointer and finds
+the main LpcCurve for the given collection of hits, using the LpcAlgorithm class.
+This curve is stored in (and owned by) the LpcEvent object. Each LpcCurve
+contains information about the Lpc points (scaled and unscaled co-ordinates),
+their (largest, principal) eigenvectors and eigenvalues, the cumulative pathlength
+along the curve, as well the positional residuals with respect to the data hits. 
+Furthermore, possible branches (LpcBranch) are found by the LpcBranchAlgorithm 
+class, and are stored inside a LpcBranchCollection for each LpcCurve.
+
+Next, feature points along the curve and branches are identified with the LpcFeatures 
+class and are stored in their respective LpcCurve and LpcBranch objects. Since the 
+main curve and its branches share common mathematical and physical quantities, both 
+inherit from the LpcAbsCurve class, which contains most of the functions that
+can be used to access the Lpc results.
+
+After the main curve and branches have been found, the LpcProcess::reconstruct()
+function tries to find the so-called LpcVertex positions, corresponding
+to interaction points, and clusters the data hits (in LpcCluster objects) 
+according to their relative positions with respect to the (unscaled) Lpc points and 
+vertices. This is achieved by the LpcLineClusterAlgorithm class, which inherits from 
+LpcAbsClusterAlgorithm, and implements the extended straight-line method outlined 
+in the <a href="http://arxiv.org/abs/1312.6059">paper</a> mentioned earlier.
+Alternatively, the LpcSingleClusterAlgorithm puts all hits into a single cluster.
+
+Clusters are then identified as either track-like or shower-like
+objects using the LpcShowerAlgorithm. 
+STL <a href="https://www.sgi.com/tech/stl/Vector.html">vectors</a> of LpcVertex 
+and LpcCluster pointers are stored in (and owned by) the LpcEvent.
+
+Finally, the information stored in the LpcCurve, LpcBranch, LpcVertex and LpcCluster 
+objects are written out before the current LpcEvent is deleted and the next event 
+is processed in LpcRun::run().
+
+\section build Building the code
+
+The package only depends on <a href="http://eigen.tuxfamily.org">
+Eigen</a>, the C<sup>++</sup> template library for linear algebra. 
+Since Eigen only contains header files, there is no need to "install" it;
+only the Eigen header-file directory needs to be present.
+
+This software can also use <a href="http://root.cern.ch">ROOT</a>, 
+a general purpose C<sup>++</sup> data analysis framework, for input and 
+output files, and for finding specific features in the 
+principal curves. However, using ROOT is not required nor 
+mandatory.
+
+Use the configure script to set various compiler options
+("configure \--help" lists the available options), then
+build using make:
+
+./configure\n
+make
+
+If successful, this should create a shared library 
+"lib/libLpcmRec.so" as well as the binary program "bin/LpcmRecMain", 
+which is based on the example LpcMain.cc file in the base
+LpcmRec directory.
+
+The file pathlib.sh gives an example of setting the
+LD_LIBRARY_PATH environment variable to include the LpcmRec
+shared library.
+
+\section run Running the code
+
+The example program "bin/LpcmRecMain" can be used to run the 
+LpcmRec code. It takes one extra argument on the command line, 
+which specifies the name of the Lpc parameter file
+
+cd example\n
+../bin/LpcmRecMain <a href="mupPars.txt">mupPars.txt</a>
+
+An example of ten 770 MeV neutrino to muon-proton 
+events is provided in the <a href="mup770MeV.txt">mup770MeV.txt</a> file, 
+which is text based and contains the following lines:
+
+NumberOfEvents NumberOfDimensions\n
+EventNumber1 NumberOfHits1\n
+HitX1 HitX2 HitX3 HitWeight\n
+Other hits...\n
+EventNumber2 NumberOfHits2\n
+HitX1 HitX2 HitX3 HitWeight\n
+Other hits...\n
+etc...\n
+
+Similarly, the <a href="ep770MeV.txt">ep770MeV.txt</a> file contains ten
+770 MeV neutrino to electron-proton events, together with the 
+<a href="epPars.txt">epPars.txt</a> parameter file.
+
+\section par LpcParameters
+
+The parameters that the Lpc algorithm uses are detailed \link params here\endlink.
+These should be defined within a text file, such as the example given in
+<a href="mupPars.txt">example/mupPars.txt</a>.
+
+\section curve LpcCurves and LpcBranches
+
+The main curve result for a given LpcEvent is stored in LpcCurve. This class
+inherits from LpcAbsCurve, which contains most of the functions that can be
+used to access the curve results. The index number LpcAbsCurve::getIndex() 
+of the main curve is nominally set to zero, while its flag  LpcAbsCurve::getFlag() 
+is set to -1 (meaning it is the main curve). This index number convention is 
+imposed by the LpcProcess::reconstruct() and LpcAlgorithm::getCurve() methods.
+
+Any branches found will be stored in the LpcBranchCollection pointer, which
+can be accessed using LpcCurve::getBranchCollection(). Internally, this collection
+is stored as a <a href="https://www.sgi.com/tech/stl/Map.html">map</a>, where the 
+map key is the generation integer index number that goes from 1 up to the allowed 
+number of generations defined by the "branchlevel" parameter, and
+the map value is the <a href="https://www.sgi.com/tech/stl/Vector.html">vector</a> 
+of LpcBranch pointers for the given generation. 
+The index number of each branch will usually start from 1
+(the nominal main curve index number of 0 plus 1), incrementing up to the total
+number of branches over all generations+1. The flag index number
+of each LpcBranch will be equal to the index number of its corresponding main
+curve (i.e. nominally 0).
+
+Branches are not found by default (the "branchlevel" parameter is set to 0). However,
+if the main LpcCurve does not cover enough of the data points, then branches should be
+enabled (branchlevel = 1) to see if the situation improves. Feedback regarding this
+experimental feature is desired and indeed welcome.
+
+If the data contains regions that are separated by (very) large distances, then it may 
+be necessary to split up each point-cloud dataset into several LpcEvents ("pseudo-events"). 
+The curve results for each subset could then be combined during user post-processing. 
+This automatic splitting up of the dataset and merging of the main curve results is not
+currently done by this package.
+
+
+\section input Dataset input formats
+
+The processing of any input file containing the dataset of points needs
+to be performed by a class inheriting from the abstract LpcAbsInput interface,
+implementing the LpcAbsInput::initialise() and
+LpcAbsInput::finalise() methods, which open and close the input file, respectively.
+Additionally, the LpcAbsInput::getEvent() function needs to be implemented,
+which is required to create a new LpcEvent pointer containing the LpcHitCollection
+of the required set of data points.
+
+The default input format is the text based LpcTextInput. Here, the first line
+of the input file needs to contain the number of events and the number
+of spatial dimensions. The next line needs to be the first event number index
+and the number of hits it contains. The following lines then list the information
+for each hit: the index number, the co-ordinate components 
+in the correct order and its weight. Other events are written in the same way 
+(see \ref run or the <a href="mup770MeV.txt"> example file</a>).
+
+If using <a href="http://root.cern.ch">ROOT</a> (informat = root), then the 
+LpcRootInput class can be used, as described \link rootin here\endlink.
+
+Additional input methods could be introduced by writing the appropriate
+class that inherits from LpcAbsInput and called from LpcInputFactory. Extra
+parameters could be added to the LpcParameters class if the new input
+format requires additional information from the user.
+
+
+\section output Dataset output formats
+
+The results stored in the LpcEvent (LpcCurve, LpcBranch, LpcVertex and 
+LpcCluster objects) are written out by classes that inherit from the abstract
+interface LpcAbsOutput, implementing the LpcAbsOutput::initialise() and
+LpcAbsOutput::finalise() methods, which open and close the output file, respectively.
+Additionally, the LpcAbsOutput::store() function must be implemented to write out
+the results in the required format.
+
+The default output format is the text based LpcTextOutput; an example of the output 
+structure can be seen \link outtext here\endlink.
+
+Alternatively, the LpcRootOutput format can be used to create a 
+<a href="http://root.cern.ch">ROOT</a> file containing 
+three <a href="http://root.cern.ch/root/html/TTree.html">TTrees</a>:
+\link lpctree lpcTree\endlink for general Lpc information, 
+\link clstree clsTree\endlink for cluster information and 
+\link vtxtree vtxTree\endlink for vertexing information. The
+<b>macros</b> sub-directory contains some example ROOT macros of creating plots
+from this output information.
+
+Additional output methods could be introduced by writing the appropriate
+class that inherits from LpcAbsOutput and called from LpcOutputFactory. Extra
+parameters could be added to the LpcParameters class if the new output format
+requires additional information from the user.
+
+\section scaling Co-ordinate scaling
+
+By default, the curves are found by first scaling the co-ordinates of the hits
+in the data. This means that each LpcHit co-ordinate component is divided by
+its corresponding range (max - min) from the dataset. If the range is zero,
+then no scaling is applied (scaling factor = 1). Using scaling also means that 
+all co-ordinate components are treated equally by the Lpc algorithm; the 
+same kernel width and step size (approximately 0.05) can be used for all 
+co-ordinate dimensions.
+
+Scaling can be disabled by including 
+
+usescaling 0 
+
+in the parameter file. This means that the co-ordinates of the hits in the dataset 
+need to have approximately the same range or extent in each dimension, and 
+the kernel width and step size need to be comparable to the typical 
+separation between data points.
+
+
+\section license License
+
+Copyright <a href="http://www2.warwick.ac.uk/fac/sci/physics/research/epp">University of Warwick</a> 2014.
+This software is distributed under the 
+<a href="http://www.boost.org/LICENSE_1_0.txt">Boost Software License, Version 1</a>
+(Aug 17 2003).
+
+\section authors Authors and contributors
+
+The main author of the LpcmRec package is 
+<a href="mailto:J.J.Back@warwick.ac.uk">John Back</a>.
+
+Other contributors to this work are:
+
+- Gary Barker
+- Steve Boyd
+- Daniel Brunt
+- Jochen Einbeck
+- Martin Haigh
+- Harmanjeet Khera
+- Ben Morgan
+- Ben Oakley
+- Yorck Ramachers
+- Dan Roythorne
+- Jamie Wynn
+
+\date Last update: 4<sup>th</sup> September 2014
+
+*/

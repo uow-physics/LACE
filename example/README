@@ -1,0 +1,10 @@
+To run the examples, first create the bin/LpcmRecMain binary.
+
+For the 10 muon proton events, do:
+
+../bin/LpcmRecMain mupPars.txt
+
+For the 10 electron proton events, do:
+
+../bin/LpcmRecMain epPars.txt
+

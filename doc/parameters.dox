@@ -1,0 +1,237 @@
+/*!
+
+\page params Parameters for the Lpc algorithm
+
+The parameters that the Lpc algorithm uses are detailed below. 
+These are stored and accessed via the LpcParameters class. 
+The parameters can all be specified within a simple text file, 
+such as the example provided <a href="mupPars.txt">here</a>,
+which contains lines of string-value pairs:
+
+parameterName parameterValue
+
+Parameter names should be specified in lower case (this is 
+automatically checked in LpcParameters::readParameterFile). 
+Comment lines in the parameter file can be included by 
+preceeding the required text with the hash symbol #:
+
+\#This is a comment line
+
+Parameters that are not included in the parameter file will be 
+set to their (recommended) default values given below.
+
+<table>
+<tr>
+  <td><b>Parameter name</b></td>
+  <td><b>Parameter description</b></td>
+  <td><b>Allowed value(s)</b></td>
+  <td><b>Default value</b></td>
+</tr>
+
+<tr>
+  <td>infile</td>
+  <td>Name of the data input file (including its full path if required)</td>
+  <td>Any string</td>
+  <td> lpcInput.txt</td>
+</tr>
+
+<tr>
+  <td>outfile</td>
+  <td>Name of the Lpc output file (including its full path if required)</td>
+  <td>Any string</td>
+  <td>lpcOutput.txt</td>
+</tr>
+
+<tr>
+  <td>informat</td>
+  <td>Format type of the input file</td>
+  <td>text or root</td>
+  <td>text</td>
+</tr>
+
+<tr>
+  <td>outformat</td>
+  <td>Format type of the output file</td>
+  <td>text or root</td>
+  <td>text</td>
+</tr>
+
+<tr>
+  <td>kernelwidth</td>
+  <td>Scaled kernel width</td>
+  <td>Any double</td>
+  <td>0.05</td>
+</tr>
+
+<tr>
+  <td>stepsize</td>
+  <td>Scaled step size</td>
+  <td>Any double</td>
+  <td>0.05</td>
+</tr>
+
+<tr>
+  <td>npoints</td>
+  <td>Number of Lpc points</td>
+  <td>Integer > 0</td>
+  <td>250</td>
+</tr>
+<tr>
+  <td>penalisation</td>
+  <td>Angle penalisation exponent factor</td>
+  <td>Any double</td>
+  <td>2.0</td>
+</tr>
+
+<tr>
+  <td>eigenratio</td>
+  <td>Minimum value for the ratio 2nd/1st eigenvalues for a Lpc point 
+      to be considered a possible branching point</td>
+  <td>Any double</td>
+  <td>0.4</td>
+</tr>
+
+<tr>
+  <td>boundary</td>
+  <td>Boundary condition for delaying convergence in the tails of the point cloud</td>
+  <td>Any double larger than convergence</td>
+  <td>0.005</td>
+</tr>
+
+<tr>
+  <td>convergence</td>
+  <td>Convergence threshold for the fractional change in the Lpc pathlength</td>
+  <td>Any (small) double</td>
+  <td>10<sup>-6</sup></td>
+</tr>
+
+<tr>
+  <td>branchlevel</td>
+  <td>Maximum generation level for branches: 1 = first branches, 2 = branches from branching points from level 1, etc.</td>
+  <td>Integer from 0 up to around 5</td>
+  <td>0 (no branches)</td>
+</tr>
+
+<tr>
+  <td>gapsize</td>
+  <td>Gap size for moving away (gapsize*stepsize) from the main curve to start a new branch</td>
+  <td>Any double</td>
+  <td>1.5</td>
+</tr>
+
+<tr>
+  <td>peakfinder</td>
+  <td>Select the peak finding method for finding features in the 1-|cosAngle| distribution </td>
+  <td><ul>
+     <li>0: do nothing</li>
+     <li>1: peaks from simple smoothing</li>
+     <li>2: <a href="http://root.cern.ch/root/htmldoc/TSpectrum.html">TSpectrum</a></li>
+  </ul></td>     
+  <td><ul>
+    <li>1: no ROOT</li>
+    <li>2: using <a href="http://root.cern.ch">ROOT</a></li>
+  </ul></td>
+</tr>
+
+<tr>
+  <td>cosanglecut</td>
+  <td>The minimum value for the 1-|cosAngle| peak heights</td>
+  <td>Any double between 0 and 1</td>
+  <td>0.01</td>
+</tr>
+
+<tr>
+  <td>minpeakfrac</td>
+  <td>Fractional minimum height of the next peak compared to the previous one (descending height order)</td>
+  <td>Any double between 0 and 1</td>
+  <td>0.01</td>
+</tr>
+
+<tr>
+  <td>peakdiffsq</td>
+  <td>Peaks are merged if their corresponding unscaled LpcPoint distance-squared is below this value</td>
+  <td>Any double</td>
+  <td>3.0</td>
+</tr>
+
+<tr>
+  <td>clustering</td>
+  <td>Specify the method for clustering hits using the Lpc information</td>
+  <td><ul>
+     <li>0: no clustering</li>
+     <li>1: extended-line method (LpcLineClusterAlgorithm)</li>
+     <li>2: put all hits into 1 cluster (LpcSingleClusterAlgorithm)</li>
+  </ul></td>
+  <td>1</td>
+</tr>
+
+<tr>
+  <td>dobranchvtx</td>
+  <td>Turn on/off the vertexing and clustering for branches</td>
+  <td>0 (off), 1 (on)</td>
+  <td>0 (off)</td>
+</tr>
+
+<tr>
+  <td>minvtxrescut</td>
+  <td>Sets the lowest value of the maximum allowed residual distance between a LpcHit and its
+nearest LpcPoint for the LpcLineClusterAlgorithm</td>
+  <td>Any double</td>
+  <td>20.0</td>
+</tr>
+
+<tr>
+  <td>convexhull</td>
+  <td>Minimum value of the convex hull ratio 
+      d<sub>transverse</sub>/d<sub>longitudinal</sub> for particle showers</td>
+  <td>Any double</td>
+  <td>0.12</td>
+</tr>
+
+<tr>
+  <td>showerres</td>
+  <td>Minimum value for LpcHit -to- LpcPoint residuals for showers</td>
+  <td>Any double</td>
+  <td>20.0</td>
+</tr>
+
+<tr>
+  <td>showerresratio</td>
+  <td>Minimum threshold fraction of LpcHit -to- LpcPoint residuals, with respect
+      to the largest residual for the given LpcCluster, for showers</td>
+  <td>Any double between 0 and 1</td>
+  <td>0.3 (i.e. 30%)</td>
+</tr>
+
+<tr>
+  <td>showerresfrac</td>
+  <td>Minimum fraction of LpcHit -to- LpcPoint residuals that need to be above
+      the shower threshold showerres</td>
+  <td>Any double between 0 and 1</td>
+  <td>0.9 (i.e. 90%)</td>
+</tr>
+
+<tr>
+  <td>firstevent</td>
+  <td>First event index number for the data containing N events</td>
+  <td>Any integer between 0 and N-1. Negative integers will be set to 0</td>
+  <td>0 (first event)</td>
+</tr>
+
+<tr>
+  <td>lastevent</td>
+  <td>Last event index number for the data containing N events</td>
+  <td>Any integer up to N-1. Negative integers mean all events will be processed</td>
+  <td>-1 (process all events regardless of what N is)</td>
+</tr>
+
+<tr>
+  <td>usescaling</td>
+  <td>Scale the LpcHit co-ordinates when finding the curves and branches</td>
+  <td>0 (off) or 1 (on)</td>
+  <td>1 (on)</td>
+</tr>
+
+</table>
+
+*/

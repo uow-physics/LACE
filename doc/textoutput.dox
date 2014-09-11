@@ -1,0 +1,211 @@
+/*!
+
+\page outtext Text output format
+
+The output given by LpcTextOutput is shown in the table below.
+
+<table>
+
+<tr>
+  <td><b>Quantity</b></td>
+  <td><b>Description</b></td>
+</tr>
+
+<tr>
+  <td>Event</td>
+  <td>The event index number integer</td>
+</tr>
+
+<tr>
+  <td>MainCurve:Id</td>
+  <td>The index number integer of the main LpcCurve</td>
+</tr>
+
+<tr>
+  <td>LpcStartPoint</td>
+  <td>The unscaled co-ordinates of the starting point of the LpcCurve</td>
+</tr>
+
+<tr>
+  <td>NumberOfLpcPoints</td>
+  <td>The integer number of points in the LpcCurve</td>
+</tr>
+
+<tr>
+  <td>LpcPoint</td>
+  <td>Each line gives the integer index number, then the unscaled 
+      co-ordinates of each LpcPoint in the LpcCurve</td>
+</tr>
+
+<tr>
+  <td>LpcEigenVectors nLpc nDim</td>
+  <td>The nDim components of the main, largest eigenvector of each
+      Lpc point (1 per line). Here, nLpc is the total number of points
+      and nDim the number of co-ordinate dimensions</td>
+</tr>
+
+<tr>
+  <td>LpcCosineAngles nLpc</td>
+  <td>Cosine of the angle between the main eigenvector
+      of the given Lpc point with the main eigenvector of the previous point 
+      (10 points per line)</td>
+</tr>
+
+<tr>
+  <td>EigenRatioRho nLpc</td>
+  <td>Ratio of the 2nd largest to the largest eigenvalues
+      &lambda;<sub>2</sub>/&lambda;<sub>1</sub> for each Lpc point 
+      (10 points per line)</td>
+</tr>
+
+<tr>
+  <td>c0 nLpc</td>
+  <td>Value of the adjusted kernel function denominator exponent scale factor
+      for each Lpc point (10 points per line)</td>
+</tr>
+
+<tr>
+  <td>HighRhoPoints</td>
+  <td>The number of Lpc points, followed by the Lpc points themselves, 
+      that have rho values above the value rho<sub>0</sub> for possible
+      branching points. This may be missing if no points satisfy 
+      rho > rho<sub>0</sub></td>
+</tr>
+
+<tr>
+  <td>LpcLambda nLpc</td>
+  <td>Cumulative signed unscaled pathlength position of each LpcPoint
+      from the Lpc starting point (10 points per line)</td>
+</tr>
+
+<tr>
+  <td>LpcLambdaAxes nLpc nDim</td>
+  <td>The nDim components of the signed cumulative unscaled pathlength
+      from the Lpc starting point for each Lpc point (1 point per line)</td>
+</tr>
+
+<tr>
+  <td>LpcPathLength nLpc</td>
+  <td>Absolute unscaled cumulative pathlength position of each LpcPoint along the curve
+      (10 points per line)</td>
+</tr>
+
+<tr>
+  <td>MeanLpcResiduals nLpc</td>
+  <td>For each LpcPoint (10 per line), the average value of the residual
+      distance from the closest LpcHit%s</td>
+</tr>
+
+<tr>
+  <td>HitResiduals nHits</td>
+  <td>For each LpcHit (10 per line, nHits in total), the value of the residual
+      distance of the closest LpcPoint</td>
+</tr>
+
+<tr>
+  <td>WeightMeanLpcResiduals nLpc</td>
+  <td>For each LpcPoint (10 per line), the average value of the residual
+      distance of the closest LpcHit%s, weighted by the hit weights</td>
+</tr>
+
+<tr>
+  <td>WeightHitResiduals nHits</td>
+  <td>For each LpcHit (10 per line, nHits in total), the value of the residual
+      distance of the closest LpcPoint multiplied by the hit weight</td>
+</tr>
+
+<tr>
+  <td>HitNearestLpc nHits</td>
+  <td>For each LpcHit (10 per line, nHits in total), the integer index number
+      of the nearest LpcPoint</td>
+</tr>
+
+<tr>
+  <td>CosPeaks nPeaks</td>
+  <td>Lists the indices of the LpcPoint%s that correspond to the peaks
+      in the 1 - |cosAngle| distribution (in descending height order)</td>
+
+<tr>
+  <td>BranchId</td>
+  <td>The index number integer of the LpcBranch (= 0 for the main curve)</td>
+</tr>
+
+<tr>
+  <td>Branch:MainCurveId</td>
+  <td>The index number integer of the main LpcCurve associated to this LpcBranch</td>
+</tr>
+
+<tr>
+  <td>Branch:GenerationLevel</td>
+  <td>The integer specifying the generation level of the LpcBranch (starting from 1).
+      The same Lpc information detailed above is then displayed for this branch</td>
+</tr>
+
+<tr>
+  <td>NumberOfVertices</td>
+  <td>The integer number of vertices found for the dataset</td>
+</tr>
+
+<tr>
+  <td>Vertex:Index</td>
+  <td>The integer index number of the LpcVertex, followed by the integer indices
+      of the associated main curve and branch</td>
+</tr>
+
+<tr>
+  <td>Vertex:Position</td>
+  <td>The co-ordinate components of the LpcVertex position</td>
+</tr>
+
+<tr>
+  <td>NumberOfClusters</td>
+  <td>The integer number of LpcCluster%s found for the dataset</td>
+</tr>
+
+<tr>
+  <td>Cluster:Index</td>
+  <td>The integer index number of the LpcCluster</td>
+</tr>
+
+<tr>
+  <td>Cluster:MainCurveIndex</td>
+  <td>The integer index number of the main LpcCurve associated with the LpcCluster,
+      followed by the LpcBranch index as well as the indices of the LpcPoint%s
+      used to find the cluster</td>
+</tr>
+
+<tr>
+  <td>Cluster:Centroid</td>
+  <td>The co-ordinate components of the centroid position of the LpcCluster</td>
+</tr>
+
+<tr>
+  <td>Cluster:PrincipalAxes</td>
+  <td>The matrix (row = axis, column = co-ordinate components) of the principle
+      component axes of the LpcCluster</td>
+</tr>
+
+<tr>
+  <td>Cluster:ConvexHull</td>
+  <td>The lengths along each (rotated) co-ordinate axis of the convex hull 
+      (LpcConvexHull)
+      encompassing the boundary of hits in the LpcCluster, after the hit
+      positions have been rotated with respect to the main principal axis
+      of the cluster</td>
+</tr>
+
+<tr>
+  <td>Cluster:IsShower</td>
+  <td>Boolean to indicate if the LpcCluster has been identified as a shower</td>
+</tr>
+
+<tr>
+  <td>Cluster:HitIndices</td>
+  <td>The number of LpcHit%s in the LpcCluster, together with a list of the index
+      of each LpcHit used in the cluster (10 hits per line)</td>
+</tr>
+
+</table>
+
+
+*/

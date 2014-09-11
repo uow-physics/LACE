@@ -1,0 +1,69 @@
+/*!
+
+\page rootin LpcRootInput TBranch structure
+
+The LpcRootInput class can be used to read in a 
+<a href="http://root.cern.ch">ROOT</a> file of the dataset,
+containing a <a href="http://root.cern.ch/root/html/TTree.html">TTree</a> with 
+the name <b>"Data"</b>, with the following
+<a href="http://root.cern.ch/root/html/TBranch.html">TBranch</a> 
+structure:
+
+<table>
+<tr>
+  <td><b>Variable name</b></td>
+  <td><b>Variable type</b></td>
+  <td><b>Variable description</b></td>
+</tr>
+
+<tr>
+  <td>eventId</td>
+  <td>integer</td>
+  <td>The LpcEvent index number</td>
+</tr>
+
+<tr>
+  <td>nHits</td>
+  <td>integer</td>
+  <td>The number of hits for the given LpcEvent</td>
+</tr>
+
+<tr>
+  <td>hitX1</td>
+  <td>vector &lt;double&gt; </td>
+  <td>The vector of the first co-ordinate component for all LpcHit%s</td>
+</tr>
+
+<tr>
+  <td>hitX2</td>
+  <td>vector &lt;double&gt; </td>
+  <td>The vector of the second co-ordinate component for all LpcHit%s</td>
+</tr>
+
+<tr>
+  <td>hitX3</td>
+  <td>vector &lt;double&gt; </td>
+  <td>The vector of the third co-ordinate component for all LpcHit%s</td>
+</tr>
+
+<tr>
+  <td>...</td>
+  <td>...</td>
+  <td>...</td>
+</tr>
+
+<tr>
+  <td>hitXn</td>
+  <td>vector &lt;double&gt; </td>
+  <td>The vector of the N<sup>th</sup> co-ordinate component for all LpcHit%s</td>
+</tr>
+
+<tr>
+  <td>hitW</td>
+  <td>vector &lt;double&gt; </td>
+  <td>The vector of the weights for all LpcHit%s</td>
+</tr>
+
+</table>
+
+*/

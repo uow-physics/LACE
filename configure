@@ -1,0 +1,218 @@
+#! /bin/bash
+
+# Default options
+COMPMODE=OPT # Optimised
+EIGENDIR=.
+PREFIX=.
+
+# Initialise ROOT installation settings
+ROOTSYS=
+DISABLE_ROOT=0
+LPC_USE_ROOT=
+
+# Check that the root-config option is present. If so,
+# automatically set the ROOTSYS variable. Note that
+# using the --rootdir option will override this setting
+# since the user may want to test a different ROOT installation
+
+ROOTINCDIR=
+ROOTLIBS=
+FOUND_ROOT=0
+if [ `type -p root-config` ]; then
+   ROOTSYS=`root-config --prefix`   
+   echo "Found the ROOT installation: ROOTSYS = $ROOTSYS"
+   FOUND_ROOT=1
+fi
+
+#--------------------------------------------------------------
+
+check_arguments () {
+
+  for arg in $* ; do
+
+    if [ "x$arg" = "x--enable-debug" ] ; then
+      COMPMODE=DBG
+
+    elif [ "x$arg" = "x--disable-root" ] ; then
+      echo "Disabling ROOT"
+      DISABLE_ROOT=1
+
+    elif [ "x$arg" = "x--help" ] ; then
+      echo -e \
+      "\nUsage: ./configure [options], where options are:\n\n"\
+      "--help                           : Prints this help\n"\
+      "--eigendir=[full directory path] : Set the EIGEN (http://eigen.tuxfamily.org) base directory EIGENDIR \n"\
+      "                                   such that the include file \$EIGENDIR/Eigen/Dense exists\n"\
+      "--rootsys=[full directory path]  : Set the ROOT (http://root.cern.ch) base directory. Note that this\n"\
+      "                                   script tries to automatically find ROOT on your system\n"\
+      "--disable-root                   : Does not build with ROOT, even if ROOT libraries are available\n"\
+      "--prefix=[installation path]     : Specifies installation path\n"\
+      "--enable-debug                   : Turns on compilation debugging flags\n"
+      exit
+
+    else
+
+      if [ "x${arg}" = "x${arg/=/}" ] ; then
+
+        echo "${arg}: wrong option. Ignored." >&2
+
+      else
+
+        option=${arg/=*/}
+        value=${arg/*=/}
+
+        if [ "x${option}" = "x--prefix" ] ; then
+          PREFIX=${value}
+        elif [ "x${option}" = "x--eigendir" ] ; then
+          EIGENDIR=${value}
+        elif [ "x${option}" = "x--rootsys" ] ; then
+          ROOTSYS=${value}
+	  # Check that the root installation is there
+	  if [ `type -p ${ROOTSYS}/bin/root-config` ]; then
+	    echo "Resetting ROOTSYS to ${ROOTSYS}"
+	    FOUND_ROOT=1
+          else
+	    echo "Could not find the specified ROOT installation at ${ROOTSYS}"
+	    if [ $FOUND_ROOT = 1 ]; then
+	      ROOTSYS=`root-config --prefix`
+	      echo "Using the ROOT installation previously found at ${ROOTSYS}."
+            fi
+	  fi
+
+        else
+          echo "${arg}: wrong option. Ignored." >&2
+        fi
+
+      fi
+    fi
+  done
+  return
+}
+
+#---------------------------------------
+
+# Check that the Eigen and ROOT installation directories are OK
+
+check_dirs() {
+
+  # Check that the include file Eigen/Dense is present
+  eigenFile=${EIGENDIR}/Eigen/Dense
+
+  if [ -f $eigenFile ]; then
+    echo "EIGENDIR set to $EIGENDIR"
+  else
+    echo "The include file \"\$EIGENDIR/Eigen/Dense\" does not exist."\
+    	 "Please set the location of the Eigen base directory"\
+         "with the --eigendir option"
+    exit 1
+  fi
+
+  if [ $DISABLE_ROOT != 1 ] && [ $FOUND_ROOT = 1 ]; then
+
+    # Check that the TROOT.h file is available from the ROOT installation    
+    ROOTINCDIR=`${ROOTSYS}/bin/root-config --incdir`
+    rootFile=${ROOTINCDIR}/TROOT.h
+
+    if [ -f $rootFile ]; then
+      echo "ROOTSYS set to $ROOTSYS";
+      LPC_USE_ROOT=1
+      ROOTLIBS=`${ROOTSYS}/bin/root-config --libs`
+      # Add the TSpectrum library
+      ROOTLIBS+=" -lSpectrum"
+      echo "ROOTLIBS = ${ROOTLIBS}"
+    else
+      echo "There is a problem. ROOTINCDIR = ${ROOTINCDIR}, but TROOT.h cannot be found..."
+      exit 1
+    fi
+  fi
+
+}
+
+#---------------------------------------
+
+check_arguments $*
+check_dirs
+
+# Find the plaform
+ARCH=`uname`
+echo "ARCH is ${ARCH}"
+
+echo "Compilation mode is ${COMPMODE}"
+echo "LPC_USE_ROOT is ${LPC_USE_ROOT}" 
+
+# Compilation options
+# Compiler
+CXX=g++
+# Optimised compiler options
+CXXFLAGS_OPT="-g -O2 -Wall -Wextra -Woverloaded-virtual -Werror -fPIC"
+# Debug mode compiler options
+CXXFLAGS_DBG="-g -Wall -Wextra -Woverloaded-virtual -Werror -fPIC"
+
+# Option to generate dependency files
+MFLAGS=-MM
+
+# Shared library flags
+SOFLAGS=-shared
+
+# MacOS options
+if [[ $ARCH == Darwin* ]]; then
+  CXXFLAGS_OPT="-g -O3 -Wall -Wextra -Woverloaded-virtual -Werror -fPIC -m64"
+  CXXFLAGS_DBG="-g -Wall -Wextra -Woverloaded-virtual -Werror -fPIC -m64"
+  SOFLAGS="-m64 -dynamiclib -single_module -undefined dynamic_lookup"
+fi
+
+CXXFLAGS=${CXXFLAGS_OPT}
+
+if [ ${COMPMODE} = DBG ]; then
+   CXXFLAGS=${CXXFLAGS_DBG}
+fi
+
+EXTRAFLAGS=
+# Check if ROOT is enabled
+if [[ $LPC_USE_ROOT = 1 ]]; then
+   EXTRAFLAGS+="-D LPC_USE_ROOT"
+fi
+
+# Write the config.mk file for the Makefile
+
+echo -n "Creating config.mk ..."
+
+rm -f config.mk
+
+cat > config.mk << EOF
+
+PACKAGE = LpcmRec
+SHELL = /bin/bash
+
+PREFIX = ${PREFIX}
+ARCH = ${ARCH}
+COMPMODE = ${COMPMODE}
+
+CXX = ${CXX}
+CXXFLAGS = ${CXXFLAGS}
+MFLAGS = ${MFLAGS}
+SOFLAGS = ${SOFLAGS}
+
+# Set-up all of the include directories
+SRCDIR = src
+INCDIR = include
+LIBDIR = lib
+BINDIR = bin
+TMPDIR = tmp
+
+DEPDIR = \$(TMPDIR)/dependencies
+OBJDIR = \$(TMPDIR)/objects
+
+EIGENDIR = ${EIGENDIR}
+ROOTINCDIR = ${ROOTINCDIR}
+ROOTLIBS = ${ROOTLIBS}
+LPC_USE_ROOT = ${LPC_USE_ROOT}
+
+EXTRAFLAGS = ${EXTRAFLAGS}
+
+EOF
+
+echo " done"
+echo "Build the code using make"
+
+exit
