@@ -101,9 +101,10 @@ check_dirs() {
   if [ -f $eigenFile ]; then
     echo "EIGENDIR set to $EIGENDIR"
   else
-    echo "The include file \"\$EIGENDIR/Eigen/Dense\" does not exist."\
-    	 "Please set the location of the Eigen base directory"\
-         "with the --eigendir option"
+    echo -e \
+	"The include file \"\$EIGENDIR/Eigen/Dense\" does not exist.\n"\
+    	"Please use the --eigendir option to set the value of \$EIGENDIR so that the header file"\
+        "\$EIGENDIR/Eigen/Dense exists.\n Download Eigen (version 3) from http://eigen.tuxfamily.org"
     exit 1
   fi
 
@@ -173,6 +174,11 @@ if [[ $LPC_USE_ROOT = 1 ]]; then
    EXTRAFLAGS+="-D LPC_USE_ROOT"
 fi
 
+# Find the list of any binary C++ files, i.e. those with "main".
+# Use the grep command for printing filenames that match the regular
+# expression, then convert the newlines from the grep output into spaces
+BINCCLIST=$(grep -l "^[[:space:]]*int[[:space:]]*main\>" *.cc | tr '\n' ' ')
+
 # Write the config.mk file for the Makefile
 
 echo -n "Creating config.mk ..."
@@ -181,7 +187,7 @@ rm -f config.mk
 
 cat > config.mk << EOF
 
-PACKAGE = LpcmRec
+PACKAGE = LACE
 SHELL = /bin/bash
 
 PREFIX = ${PREFIX}
@@ -209,6 +215,8 @@ ROOTLIBS = ${ROOTLIBS}
 LPC_USE_ROOT = ${LPC_USE_ROOT}
 
 EXTRAFLAGS = ${EXTRAFLAGS}
+
+BINCCLIST = ${BINCCLIST}
 
 EOF
 

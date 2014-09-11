@@ -8,7 +8,7 @@
  # John Back                                                              #
  #                                                                        #
  # -------------------------------                                        #
- # Standalone Makefile for LpcmRec                                        #
+ # Standalone Makefile for LACE                                           #
  # -------------------------------                                        #
  #                                                                        #
  # Instructions                                                           #
@@ -16,9 +16,9 @@
  #     - run 'make <target>'                                              #
  #                                                                        #
  # Build targets                                                          #
- #   lib     - make libLpcmRec.a                                          #
- #   shlib   - make libLpcmRec.so (default)                               #
- #   bin     - make bin/LpcmRecMain program using libLpcmRec.so (default) #
+ #   lib     - make libLACE.a                                             #
+ #   shlib   - make libLACE.so (default)                                  #
+ #   bin     - make bin/LACEMain program using libLACE.so (default)       #
  #   install - install the include and lib directories in $PREFIX         #
  #   clean   - delete all intermediate and final build objects            #
  #                                                                        #
@@ -51,7 +51,7 @@ HHLIST:=$(wildcard $(INCDIR)/*.hh)
 CCLIST:=$(filter-out $(SKIPLIST),$(wildcard $(SRCDIR)/*.cc))
 
 # List of all source files that contain main functions
-BINCCLIST:=$(shell grep -l "^[[:space:]]*int[[:space:]]*main\>" $(wildcard *))
+BINCCLIST:=$(BINCCLIST)
 
 # List of all object files to build
 OLIST:=$(patsubst %.cc,%.o,$(addprefix $(OBJDIR)/,$(notdir $(CCLIST))))
