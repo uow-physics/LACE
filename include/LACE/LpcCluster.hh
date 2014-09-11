@@ -16,7 +16,7 @@
 #ifndef LPC_CLUSTER_HH
 #define LPC_CLUSTER_HH
 
-#include "LpcmRec/LpcBinRange.hh"
+#include "LACE/LpcBinRange.hh"
 
 #include <Eigen/Dense>
 #include <vector>

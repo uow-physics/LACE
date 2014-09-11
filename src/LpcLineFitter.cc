@@ -9,9 +9,9 @@
     \brief Class that calculates the regression best fit line through a set of data points
 */
 
-#include "LpcmRec/LpcLineFitter.hh"
+#include "LACE/LpcLineFitter.hh"
 
-#include "LpcmRec/LpcFunctions.hh"
+#include "LACE/LpcFunctions.hh"
 
 LpcLineFitter::LpcLineFitter()
 {

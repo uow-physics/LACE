@@ -20,8 +20,8 @@
 #ifndef LPC_ALGORITHM_HH
 #define LPC_ALGORITHM_HH
 
-#include "LpcmRec/LpcFunctions.hh"
-#include "LpcmRec/LpcPoint.hh"
+#include "LACE/LpcFunctions.hh"
+#include "LACE/LpcPoint.hh"
 
 #include <Eigen/Dense>
 #include <vector>
@@ -147,12 +147,8 @@ private:
     //! The number of data points
     int N_;
 
-    //! Typedef to make using a vector of Eigen::VectorXd objects easier
-    typedef std::vector< std::pair<int, Eigen::VectorXd>, 
-			 Eigen::aligned_allocator<Eigen::VectorXd> > LpcEigenXdVectPair;
-
     //! The local neighbourhood points ("x" or "u") with eigenvalue ratios > rho0
-    LpcEigenXdVectPair highRhoPoints_;
+    std::vector<LpcPoint> highRhoPoints_;
 
     //! The lpc points ("m(u)" or "mu"), equivalent to the local weighted mean
     Eigen::MatrixXd lpcPoints_;

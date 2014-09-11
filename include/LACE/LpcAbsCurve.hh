@@ -16,10 +16,10 @@
 #ifndef LPC_ABS_CURVE_HH
 #define LPC_ABS_CURVE_HH
 
-#include "LpcmRec/LpcBinRange.hh"
-#include "LpcmRec/LpcPathLength.hh"
-#include "LpcmRec/LpcPoint.hh"
-#include "LpcmRec/LpcResiduals.hh"
+#include "LACE/LpcBinRange.hh"
+#include "LACE/LpcPathLength.hh"
+#include "LACE/LpcPoint.hh"
+#include "LACE/LpcResiduals.hh"
 
 #include <Eigen/Dense>
 #include <vector>

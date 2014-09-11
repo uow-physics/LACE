@@ -9,7 +9,7 @@
     \brief Class containing various functions used by other classes
 */
 
-#include "LpcmRec/LpcFunctions.hh"
+#include "LACE/LpcFunctions.hh"
 
 LpcFunctions::LpcFunctions()
 {

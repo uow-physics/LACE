@@ -9,7 +9,7 @@
     \brief Class that defines the scaled and unscaled co-ordinates of a point in the LpcAbsCurve
 */
 
-#include "LpcmRec/LpcPoint.hh"
+#include "LACE/LpcPoint.hh"
 
 LpcPoint::LpcPoint() :
     index_(-1),

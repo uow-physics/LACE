@@ -9,7 +9,7 @@
     \brief Simple class that defines an lpc vertex object
 */
 
-#include "LpcmRec/LpcVertex.hh"
+#include "LACE/LpcVertex.hh"
 
 #include <iostream>
 

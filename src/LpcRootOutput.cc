@@ -11,20 +11,20 @@
     \brief Class to write out the results of the lpc algorithm into a ROOT file
 */
 
-#include "LpcmRec/LpcRootOutput.hh"
+#include "LACE/LpcRootOutput.hh"
 
-#include "LpcmRec/LpcAbsCurve.hh"
-#include "LpcmRec/LpcBranchCollection.hh"
-#include "LpcmRec/LpcBranch.hh"
-#include "LpcmRec/LpcCluster.hh"
-#include "LpcmRec/LpcCurve.hh"
-#include "LpcmRec/LpcEvent.hh"
-#include "LpcmRec/LpcHit.hh"
-#include "LpcmRec/LpcHitCollection.hh"
-#include "LpcmRec/LpcPathLength.hh"
-#include "LpcmRec/LpcPoint.hh"
-#include "LpcmRec/LpcResiduals.hh"
-#include "LpcmRec/LpcVertex.hh"
+#include "LACE/LpcAbsCurve.hh"
+#include "LACE/LpcBranchCollection.hh"
+#include "LACE/LpcBranch.hh"
+#include "LACE/LpcCluster.hh"
+#include "LACE/LpcCurve.hh"
+#include "LACE/LpcEvent.hh"
+#include "LACE/LpcHit.hh"
+#include "LACE/LpcHitCollection.hh"
+#include "LACE/LpcPathLength.hh"
+#include "LACE/LpcPoint.hh"
+#include "LACE/LpcResiduals.hh"
+#include "LACE/LpcVertex.hh"
 
 #include "TFile.h"
 #include "TString.h"

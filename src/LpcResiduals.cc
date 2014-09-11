@@ -9,7 +9,7 @@
     \brief Class that stores the lpc-to-hit residuals
 */
 
-#include "LpcmRec/LpcResiduals.hh"
+#include "LACE/LpcResiduals.hh"
 
 LpcResiduals::LpcResiduals(const Eigen::VectorXd& lpcResiduals,
 			   const Eigen::VectorXd& hitResiduals,

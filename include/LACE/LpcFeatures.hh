@@ -16,7 +16,7 @@
 #ifndef LPC_FEATURES_HH
 #define LPC_FEATURES_HH
 
-#include "LpcmRec/LpcBinRange.hh"
+#include "LACE/LpcBinRange.hh"
 
 #include <Eigen/Dense>
 #include <vector>

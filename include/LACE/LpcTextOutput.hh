@@ -16,7 +16,7 @@
 #ifndef LPC_TEXT_OUTPUT_HH
 #define LPC_TEXT_OUTPUT_HH
 
-#include "LpcmRec/LpcAbsOutput.hh"
+#include "LACE/LpcAbsOutput.hh"
 
 #include <Eigen/Dense>
 #include <fstream>

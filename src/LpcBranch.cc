@@ -9,7 +9,7 @@
     \brief Class that stores the result of a branch of the local principal curve
 */
 
-#include "LpcmRec/LpcBranch.hh"
+#include "LACE/LpcBranch.hh"
 
 LpcBranch::LpcBranch(int index, const LpcPoint& startPoint, 
 		     const std::vector<LpcPoint>& lpcPoints,

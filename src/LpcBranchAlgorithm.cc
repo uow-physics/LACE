@@ -13,14 +13,14 @@
     (http://cran.r-project.org/web/packages/LPCM/index.html)
 */
 
-#include "LpcmRec/LpcBranchAlgorithm.hh"
+#include "LACE/LpcBranchAlgorithm.hh"
 
-#include "LpcmRec/LpcBranch.hh"
-#include "LpcmRec/LpcBranchCollection.hh"
-#include "LpcmRec/LpcCurve.hh"
-#include "LpcmRec/LpcHitCollection.hh"
-#include "LpcmRec/LpcParameters.hh"
-#include "LpcmRec/LpcPoint.hh"
+#include "LACE/LpcBranch.hh"
+#include "LACE/LpcBranchCollection.hh"
+#include "LACE/LpcCurve.hh"
+#include "LACE/LpcHitCollection.hh"
+#include "LACE/LpcParameters.hh"
+#include "LACE/LpcPoint.hh"
 
 #include <utility>
 

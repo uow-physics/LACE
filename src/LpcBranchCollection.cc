@@ -9,9 +9,9 @@
     \brief Class that stores a series of branches for the main principal curve
 */
 
-#include "LpcmRec/LpcBranchCollection.hh"
+#include "LACE/LpcBranchCollection.hh"
 
-#include "LpcmRec/LpcBranch.hh"
+#include "LACE/LpcBranch.hh"
 
 #include <iostream>
 

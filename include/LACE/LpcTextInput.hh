@@ -16,7 +16,7 @@
 #ifndef LPC_TEXT_INPUT_HH
 #define LPC_TEXT_INPUT_HH
 
-#include "LpcmRec/LpcAbsInput.hh"
+#include "LACE/LpcAbsInput.hh"
 
 #include <fstream>
 #include <string>

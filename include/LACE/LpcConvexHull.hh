@@ -16,7 +16,7 @@
 #ifndef LPC_CONVEX_HULL_HH
 #define LPC_CONVEX_HULL_HH
 
-#include "LpcmRec/LpcFunctions.hh"
+#include "LACE/LpcFunctions.hh"
 
 class LpcCluster;
 

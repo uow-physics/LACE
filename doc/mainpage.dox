@@ -1,16 +1,16 @@
 /**
-@mainpage LpcmRec Main Page
+@mainpage LACE Main Page
 
 \tableofcontents
 
 \section intro Introduction
 
-This package (Local Principal Curve Methods for REConstruction)
-is a C<sup>++</sup> implementation of the local principal 
-curve (Lpc) algorithm described in 
-<a href="http://link.springer.com/article/10.1140/epjc/s10052-014-2832-4">
-Eur. Phys. J. C (2014) 74:2832</a>,
-also available on the <a href="http://arxiv.org/abs/1312.6059">arXiv</a>.
+This package (<b>L</b>pc <b>A</b>lgorithm in 
+a <b>C</b><sup>++</sup> <b>E</b>nvironment) is a C<sup>++</sup> 
+implementation of the local principal curve (<b>Lpc</b>) algorithm described 
+in <a href="http://link.springer.com/article/10.1140/epjc/s10052-014-2832-4">
+Eur. Phys. J. C (2014) 74:2832</a>, also available on the 
+<a href="http://arxiv.org/abs/1312.6059">arXiv</a>.
 It is based on the <a href="http://www.r-project.org">R-code</a> package 
 <a href=http://cran.r-project.org/web/packages/LPCM/index.html>LPCM</a>
 written by Jochen Einbeck and Ludger Evers.
@@ -100,22 +100,22 @@ build using make:
 make
 
 If successful, this should create a shared library 
-"lib/libLpcmRec.so" as well as the binary program "bin/LpcmRecMain", 
+"lib/libLACE.so" as well as the binary program "bin/LACEMain", 
 which is based on the example LpcMain.cc file in the base
-LpcmRec directory.
+LACE directory.
 
 The file pathlib.sh gives an example of setting the
-LD_LIBRARY_PATH environment variable to include the LpcmRec
+LD_LIBRARY_PATH environment variable to include the LACE
 shared library.
 
 \section run Running the code
 
-The example program "bin/LpcmRecMain" can be used to run the 
-LpcmRec code. It takes one extra argument on the command line, 
+The example program "bin/LACEMain" can be used to run the 
+LACE code. It takes one extra argument on the command line, 
 which specifies the name of the Lpc parameter file
 
 cd example\n
-../bin/LpcmRecMain <a href="mupPars.txt">mupPars.txt</a>
+../bin/LACEMain <a href="mupPars.txt">mupPars.txt</a>
 
 An example of ten 770 MeV neutrino to muon-proton 
 events is provided in the <a href="mup770MeV.txt">mup770MeV.txt</a> file, 
@@ -256,7 +256,7 @@ This software is distributed under the
 
 \section authors Authors and contributors
 
-The main author of the LpcmRec package is 
+The main author of the LACE package is 
 <a href="mailto:J.J.Back@warwick.ac.uk">John Back</a>.
 
 Other contributors to this work are:
@@ -265,6 +265,7 @@ Other contributors to this work are:
 - Steve Boyd
 - Daniel Brunt
 - Jochen Einbeck
+- Ludger Evers
 - Martin Haigh
 - Harmanjeet Khera
 - Ben Morgan
@@ -273,6 +274,6 @@ Other contributors to this work are:
 - Dan Roythorne
 - Jamie Wynn
 
-\date Last update: 4<sup>th</sup> September 2014
+\date Last update: 11<sup>th</sup> September 2014
 
 */

@@ -13,11 +13,11 @@
     (http://cran.r-project.org/web/packages/LPCM/index.html)
 */
 
-#include "LpcmRec/LpcAlgorithm.hh"
+#include "LACE/LpcAlgorithm.hh"
 
-#include "LpcmRec/LpcCurve.hh"
-#include "LpcmRec/LpcHitCollection.hh"
-#include "LpcmRec/LpcParameters.hh"
+#include "LACE/LpcCurve.hh"
+#include "LACE/LpcHitCollection.hh"
+#include "LACE/LpcParameters.hh"
 
 #include <utility>
 
@@ -166,27 +166,11 @@ LpcCurve* LpcAlgorithm::getCurve(int curveIndex, const LpcHitCollection* theHits
     // Store the scaled path lengths. This will also calculate the unscaled values
     LpcPathLength lpcPaths(lambda_, lambdaAxes_, theRange_);
 
-    // Also store the high rho points as a vector of LpcPoints
-    std::vector<LpcPoint> highRhoPoints;
-    
-    LpcEigenXdVectPair::const_iterator iter;
-    for (iter = highRhoPoints_.begin(); iter != highRhoPoints_.end(); ++iter) {
-
-	int index = iter->first;
-	Eigen::VectorXd hp = iter->second;
-
-	LpcPoint theHighPoint(index, hp);
-	// Also find the unscaled co-ordinates
-	theHighPoint.unscale(theRange_);
-	highRhoPoints.push_back(theHighPoint);
-
-    }
-
     // Construct the lpc curve pointer, storing all relevant info. This will
     // also automatically calculate and store the lpc-to-hit residuals
     int mainCurveFlag(-1);
     LpcCurve* theCurve = new LpcCurve(curveIndex, startPoint_, lpcPoints, eigenVectors_,
-				      cosAngles_, lpcPaths, rho_, c0_, highRhoPoints,
+				      cosAngles_, lpcPaths, rho_, c0_, highRhoPoints_,
 				      theHits, mainCurveFlag);
     
     // Return the lpc
@@ -280,7 +264,12 @@ void LpcAlgorithm::forward(const Eigen::VectorXd& lastEVect)
 
 	if (i < iterVal && rho_(i) > rho0_ && rho_(j) < rho0_) {
 
-	    highRhoPoints_.push_back(std::pair<int, Eigen::VectorXd>(i, x));
+	    // Create a "high rho" LpcPoint object
+	    LpcPoint theHighPoint(i, x);
+	    // Obtain its unscaled co-ordinates
+	    theHighPoint.unscale(theRange_);
+	    // Store in the internal vector
+	    highRhoPoints_.push_back(theHighPoint);
 
 	}
 
@@ -442,7 +431,12 @@ void LpcAlgorithm::backward(const Eigen::VectorXd& lastEVect)
 
 	if (i > iterVal && rho_(i) > rho0_ && rho_(j) < rho0_) {
 
-	    highRhoPoints_.push_back(std::pair<int, Eigen::VectorXd>(i, x));
+	    // Create a "high rho" LpcPoint object
+	    LpcPoint theHighPoint(i, x);
+	    // Obtain its unscaled co-ordinates
+	    theHighPoint.unscale(theRange_);
+	    // Store in the internal vector
+	    highRhoPoints_.push_back(theHighPoint);
 
 	}
 

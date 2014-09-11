@@ -9,15 +9,15 @@
     \brief Class that creates simple clusters by just including all hits
 */
 
-#include "LpcmRec/LpcSingleClusterAlgorithm.hh"
+#include "LACE/LpcSingleClusterAlgorithm.hh"
 
-#include "LpcmRec/LpcCluster.hh"
-#include "LpcmRec/LpcCurve.hh"
-#include "LpcmRec/LpcHit.hh"
-#include "LpcmRec/LpcHitCollection.hh"
-#include "LpcmRec/LpcParameters.hh"
-#include "LpcmRec/LpcResiduals.hh"
-#include "LpcmRec/LpcVertex.hh"
+#include "LACE/LpcCluster.hh"
+#include "LACE/LpcCurve.hh"
+#include "LACE/LpcHit.hh"
+#include "LACE/LpcHitCollection.hh"
+#include "LACE/LpcParameters.hh"
+#include "LACE/LpcResiduals.hh"
+#include "LACE/LpcVertex.hh"
 
 #include <Eigen/Dense>
 #include <vector>

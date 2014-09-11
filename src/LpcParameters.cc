@@ -9,7 +9,7 @@
     \brief Class used to define parameters for the lpc algorithm
 */
 
-#include "LpcmRec/LpcParameters.hh"
+#include "LACE/LpcParameters.hh"
 
 #include <cstdlib>
 #include <fstream>

@@ -9,11 +9,11 @@
     \brief Class that defines the shower algorithm
 */
 
-#include "LpcmRec/LpcShowerAlgorithm.hh"
+#include "LACE/LpcShowerAlgorithm.hh"
 
-#include "LpcmRec/LpcCluster.hh"
-#include "LpcmRec/LpcParameters.hh"
-#include "LpcmRec/LpcConvexHull.hh"
+#include "LACE/LpcCluster.hh"
+#include "LACE/LpcParameters.hh"
+#include "LACE/LpcConvexHull.hh"
 
 #include <algorithm>
 #include <cmath>

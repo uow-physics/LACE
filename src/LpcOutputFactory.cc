@@ -9,12 +9,12 @@
     \brief Class to select the required LpcAbsOutput implementation
 */
 
-#include "LpcmRec/LpcOutputFactory.hh"
+#include "LACE/LpcOutputFactory.hh"
 
-#include "LpcmRec/LpcAbsOutput.hh"
-#include "LpcmRec/LpcTextOutput.hh"
-#include "LpcmRec/LpcRootOutput.hh"
-#include "LpcmRec/LpcParameters.hh"
+#include "LACE/LpcAbsOutput.hh"
+#include "LACE/LpcTextOutput.hh"
+#include "LACE/LpcRootOutput.hh"
+#include "LACE/LpcParameters.hh"
 
 #include <locale>
 #include <string>

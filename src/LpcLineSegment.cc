@@ -9,7 +9,7 @@
     \brief Class that defines the line segments used for vertexing/clustering
 */
 
-#include "LpcmRec/LpcLineSegment.hh"
+#include "LACE/LpcLineSegment.hh"
 
 #include <iostream>
 

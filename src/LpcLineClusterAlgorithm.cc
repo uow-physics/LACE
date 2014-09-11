@@ -9,17 +9,17 @@
     \brief Class that defines the (extended) line vertexing algorithm
 */
 
-#include "LpcmRec/LpcLineClusterAlgorithm.hh"
+#include "LACE/LpcLineClusterAlgorithm.hh"
 
-#include "LpcmRec/LpcAbsCurve.hh"
-#include "LpcmRec/LpcBranch.hh"
-#include "LpcmRec/LpcBranchCollection.hh"
-#include "LpcmRec/LpcCluster.hh"
-#include "LpcmRec/LpcCurve.hh"
-#include "LpcmRec/LpcHit.hh"
-#include "LpcmRec/LpcHitCollection.hh"
-#include "LpcmRec/LpcParameters.hh"
-#include "LpcmRec/LpcVertex.hh"
+#include "LACE/LpcAbsCurve.hh"
+#include "LACE/LpcBranch.hh"
+#include "LACE/LpcBranchCollection.hh"
+#include "LACE/LpcCluster.hh"
+#include "LACE/LpcCurve.hh"
+#include "LACE/LpcHit.hh"
+#include "LACE/LpcHitCollection.hh"
+#include "LACE/LpcParameters.hh"
+#include "LACE/LpcVertex.hh"
 
 #include <cmath>
 #include <iostream>
