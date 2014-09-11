@@ -11,11 +11,11 @@
     \brief Class to read in a ROOT file containing a dataset of hits (point cloud)
 */
 
-#include "LpcmRec/LpcRootInput.hh"
+#include "LACE/LpcRootInput.hh"
 
-#include "LpcmRec/LpcEvent.hh"
-#include "LpcmRec/LpcHit.hh"
-#include "LpcmRec/LpcHitCollection.hh"
+#include "LACE/LpcEvent.hh"
+#include "LACE/LpcHit.hh"
+#include "LACE/LpcHitCollection.hh"
 
 #include "TBranch.h"
 #include "TFile.h"

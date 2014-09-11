@@ -9,15 +9,15 @@
   \brief Class to run the overall lpc algorithm with a given input dataset
 */
 
-#include "LpcmRec/LpcRun.hh"
+#include "LACE/LpcRun.hh"
 
-#include "LpcmRec/LpcAbsInput.hh"
-#include "LpcmRec/LpcAbsOutput.hh"
-#include "LpcmRec/LpcEvent.hh"
-#include "LpcmRec/LpcInputFactory.hh"
-#include "LpcmRec/LpcOutputFactory.hh"
-#include "LpcmRec/LpcParameters.hh"
-#include "LpcmRec/LpcProcess.hh"
+#include "LACE/LpcAbsInput.hh"
+#include "LACE/LpcAbsOutput.hh"
+#include "LACE/LpcEvent.hh"
+#include "LACE/LpcInputFactory.hh"
+#include "LACE/LpcOutputFactory.hh"
+#include "LACE/LpcParameters.hh"
+#include "LACE/LpcProcess.hh"
 
 #include <iostream>
 
@@ -120,6 +120,8 @@ void LpcRun::run() {
     // Finalise the input and output steps
     theOutput_->finalise();
     theInput_->finalise();
+
+    std::cout<<"Results stored in "<<theOutput_->getOutputFileName()<<std::endl;
 
 }
 

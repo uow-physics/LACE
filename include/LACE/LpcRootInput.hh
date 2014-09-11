@@ -18,7 +18,7 @@
 #ifndef LPC_ROOT_INPUT_HH
 #define LPC_ROOT_INPUT_HH
 
-#include "LpcmRec/LpcAbsInput.hh"
+#include "LACE/LpcAbsInput.hh"
 
 #include <map>
 #include <string>

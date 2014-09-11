@@ -20,9 +20,9 @@
 #ifndef LPC_BRANCH_ALGORITHM_HH
 #define LPC_BRANCH_ALGORITHM_HH
 
-#include "LpcmRec/LpcAlgorithm.hh"
-#include "LpcmRec/LpcFunctions.hh"
-#include "LpcmRec/LpcPoint.hh"
+#include "LACE/LpcAlgorithm.hh"
+#include "LACE/LpcFunctions.hh"
+#include "LACE/LpcPoint.hh"
 
 #include <Eigen/Dense>
 #include <vector>

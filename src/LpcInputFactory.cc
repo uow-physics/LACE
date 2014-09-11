@@ -9,12 +9,12 @@
     \brief Class to select the required LpcAbsInput implementation
 */
 
-#include "LpcmRec/LpcInputFactory.hh"
+#include "LACE/LpcInputFactory.hh"
 
-#include "LpcmRec/LpcAbsInput.hh"
-#include "LpcmRec/LpcTextInput.hh"
-#include "LpcmRec/LpcRootInput.hh"
-#include "LpcmRec/LpcParameters.hh"
+#include "LACE/LpcAbsInput.hh"
+#include "LACE/LpcTextInput.hh"
+#include "LACE/LpcRootInput.hh"
+#include "LACE/LpcParameters.hh"
 
 #include <locale>
 #include <string>

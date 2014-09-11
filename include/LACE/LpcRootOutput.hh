@@ -18,7 +18,7 @@
 #ifndef LPC_ROOT_OUTPUT_HH
 #define LPC_ROOT_OUTPUT_HH
 
-#include "LpcmRec/LpcAbsOutput.hh"
+#include "LACE/LpcAbsOutput.hh"
 
 #include <Eigen/Dense>
 #include <map>

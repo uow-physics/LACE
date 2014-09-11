@@ -9,9 +9,9 @@
     \brief Class that stores the result of the local principal curve
 */
 
-#include "LpcmRec/LpcCurve.hh"
+#include "LACE/LpcCurve.hh"
 
-#include "LpcmRec/LpcBranchCollection.hh"
+#include "LACE/LpcBranchCollection.hh"
 
 LpcCurve::LpcCurve(int index, const LpcPoint& startPoint, 
 		   const std::vector<LpcPoint>& lpcPoints,

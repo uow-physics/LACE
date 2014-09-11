@@ -9,9 +9,9 @@
     \brief  Class that defines an abstract local principal curve
 */
 
-#include "LpcmRec/LpcAbsCurve.hh"
+#include "LACE/LpcAbsCurve.hh"
 
-#include "LpcmRec/LpcHitCollection.hh"
+#include "LACE/LpcHitCollection.hh"
 
 #include <iostream>
 

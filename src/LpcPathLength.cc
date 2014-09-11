@@ -9,7 +9,7 @@
     \brief Class used to define a series of pathlengths along the lpc
 */
 
-#include "LpcmRec/LpcPathLength.hh"
+#include "LACE/LpcPathLength.hh"
 
 LpcPathLength::LpcPathLength() :
     N_(0),

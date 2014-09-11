@@ -9,14 +9,14 @@
     \brief Class containing the processing steps to find features for a given lpc
 */
 
-#include "LpcmRec/LpcFeatures.hh"
+#include "LACE/LpcFeatures.hh"
 
-#include "LpcmRec/LpcAbsCurve.hh"
-#include "LpcmRec/LpcBranch.hh"
-#include "LpcmRec/LpcBranchCollection.hh"
-#include "LpcmRec/LpcCurve.hh"
-#include "LpcmRec/LpcParameters.hh"
-#include "LpcmRec/LpcPoint.hh"
+#include "LACE/LpcAbsCurve.hh"
+#include "LACE/LpcBranch.hh"
+#include "LACE/LpcBranchCollection.hh"
+#include "LACE/LpcCurve.hh"
+#include "LACE/LpcParameters.hh"
+#include "LACE/LpcPoint.hh"
 
 #ifdef LPC_USE_ROOT
 #include "TSpectrum.h"

@@ -9,7 +9,7 @@
     \brief Class used to define a hit in the dataset or point cloud
 */
 
-#include "LpcmRec/LpcHit.hh"
+#include "LACE/LpcHit.hh"
 
 #include <iostream>
 

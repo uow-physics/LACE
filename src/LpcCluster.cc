@@ -9,9 +9,9 @@
     \brief Class that defines an lpc cluster object
 */
 
-#include "LpcmRec/LpcCluster.hh"
-#include "LpcmRec/LpcFunctions.hh"
-#include "LpcmRec/LpcHit.hh"
+#include "LACE/LpcCluster.hh"
+#include "LACE/LpcFunctions.hh"
+#include "LACE/LpcHit.hh"
 
 #include <algorithm>
 #include <iostream>

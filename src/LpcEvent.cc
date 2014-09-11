@@ -9,12 +9,12 @@
     \brief Class used to define an event, which contains a collection of hit pointers
 */
 
-#include "LpcmRec/LpcEvent.hh"
+#include "LACE/LpcEvent.hh"
 
-#include "LpcmRec/LpcCluster.hh"
-#include "LpcmRec/LpcCurve.hh"
-#include "LpcmRec/LpcHitCollection.hh"
-#include "LpcmRec/LpcVertex.hh"
+#include "LACE/LpcCluster.hh"
+#include "LACE/LpcCurve.hh"
+#include "LACE/LpcHitCollection.hh"
+#include "LACE/LpcVertex.hh"
 
 LpcEvent::LpcEvent(int eventNumber) : 
     eventNumber_(eventNumber),

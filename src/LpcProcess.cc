@@ -9,22 +9,22 @@
     \brief Class defining the process of finding curves for events
 */
 
-#include "LpcmRec/LpcProcess.hh"
+#include "LACE/LpcProcess.hh"
 
-#include "LpcmRec/LpcAlgorithm.hh"
-#include "LpcmRec/LpcBranchAlgorithm.hh"
-#include "LpcmRec/LpcBranchCollection.hh"
-#include "LpcmRec/LpcCluster.hh"
-#include "LpcmRec/LpcClusterData.hh"
-#include "LpcmRec/LpcCurve.hh"
-#include "LpcmRec/LpcEvent.hh"
-#include "LpcmRec/LpcFeatures.hh"
-#include "LpcmRec/LpcLineClusterAlgorithm.hh"
-#include "LpcmRec/LpcParameters.hh"
-#include "LpcmRec/LpcPoint.hh"
-#include "LpcmRec/LpcShowerAlgorithm.hh"
-#include "LpcmRec/LpcSingleClusterAlgorithm.hh"
-#include "LpcmRec/LpcVertex.hh"
+#include "LACE/LpcAlgorithm.hh"
+#include "LACE/LpcBranchAlgorithm.hh"
+#include "LACE/LpcBranchCollection.hh"
+#include "LACE/LpcCluster.hh"
+#include "LACE/LpcClusterData.hh"
+#include "LACE/LpcCurve.hh"
+#include "LACE/LpcEvent.hh"
+#include "LACE/LpcFeatures.hh"
+#include "LACE/LpcLineClusterAlgorithm.hh"
+#include "LACE/LpcParameters.hh"
+#include "LACE/LpcPoint.hh"
+#include "LACE/LpcShowerAlgorithm.hh"
+#include "LACE/LpcSingleClusterAlgorithm.hh"
+#include "LACE/LpcVertex.hh"
 
 #include <iostream>
 

@@ -16,9 +16,9 @@
 #ifndef LPC_SINGLE_CLUSTER_ALGORITHM_HH
 #define LPC_SINGLE_CLUSTER_ALGORITHM_HH
 
-#include "LpcmRec/LpcAbsClusterAlgorithm.hh"
+#include "LACE/LpcAbsClusterAlgorithm.hh"
 
-#include "LpcmRec/LpcClusterData.hh"
+#include "LACE/LpcClusterData.hh"
 
 class LpcCurve;
 class LpcParameters;

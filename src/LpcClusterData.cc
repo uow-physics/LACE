@@ -9,10 +9,10 @@
     \brief Class that is a container of the LpcCluster and LpcVertex pointers from clustering
 */
 
-#include "LpcmRec/LpcClusterData.hh"
+#include "LACE/LpcClusterData.hh"
 
-#include "LpcmRec/LpcCluster.hh"
-#include "LpcmRec/LpcVertex.hh"
+#include "LACE/LpcCluster.hh"
+#include "LACE/LpcVertex.hh"
 
 LpcClusterData::LpcClusterData() :
     theVertices_(),

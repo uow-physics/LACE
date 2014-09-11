@@ -9,9 +9,9 @@
     \brief Class that calculates the "convex hull" extent of a cluster of hits
 */
 
-#include "LpcmRec/LpcConvexHull.hh"
+#include "LACE/LpcConvexHull.hh"
 
-#include "LpcmRec/LpcCluster.hh"
+#include "LACE/LpcCluster.hh"
 
 #include <Eigen/Dense>
 

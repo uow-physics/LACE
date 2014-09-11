@@ -9,13 +9,13 @@
     \brief Abstract class to store the results of the lpc algorithm
 */
 
-#include "LpcmRec/LpcAbsOutput.hh"
+#include "LACE/LpcAbsOutput.hh"
 
-#include "LpcmRec/LpcCluster.hh"
-#include "LpcmRec/LpcCurve.hh"
-#include "LpcmRec/LpcHitCollection.hh"
-#include "LpcmRec/LpcEvent.hh"
-#include "LpcmRec/LpcVertex.hh"
+#include "LACE/LpcCluster.hh"
+#include "LACE/LpcCurve.hh"
+#include "LACE/LpcHitCollection.hh"
+#include "LACE/LpcEvent.hh"
+#include "LACE/LpcVertex.hh"
 
 LpcAbsOutput::LpcAbsOutput(const std::string& outputFileName) :
     outputFileName_(outputFileName),

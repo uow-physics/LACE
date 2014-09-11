@@ -9,10 +9,10 @@
     \brief Class used to define a collection of hit pointers
 */
 
-#include "LpcmRec/LpcHitCollection.hh"
+#include "LACE/LpcHitCollection.hh"
 
-#include "LpcmRec/LpcFunctions.hh"
-#include "LpcmRec/LpcHit.hh"
+#include "LACE/LpcFunctions.hh"
+#include "LACE/LpcHit.hh"
 
 LpcHitCollection::LpcHitCollection(int nDim) :
     nDim_(nDim),

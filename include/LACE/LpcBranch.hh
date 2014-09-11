@@ -16,10 +16,10 @@
 #ifndef LPC_BRANCH_HH
 #define LPC_BRANCH_HH
 
-#include "LpcmRec/LpcAbsCurve.hh"
+#include "LACE/LpcAbsCurve.hh"
 
-#include "LpcmRec/LpcPathLength.hh"
-#include "LpcmRec/LpcPoint.hh"
+#include "LACE/LpcPathLength.hh"
+#include "LACE/LpcPoint.hh"
 
 #include <Eigen/Dense>
 #include <vector>

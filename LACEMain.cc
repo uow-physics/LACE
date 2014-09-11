@@ -1,10 +1,10 @@
-#include "LpcmRec/LpcRun.hh"
+#include "LACE/LpcRun.hh"
 
 #include <string>
 
 int main(int argc, char **argv) {
 
-    std::string parameterFileName = "lpcParameters.dat";
+    std::string parameterFileName = "lpcParameters.txt";
     if (argc > 1) {parameterFileName = argv[1];}
 
     LpcRun run(parameterFileName);

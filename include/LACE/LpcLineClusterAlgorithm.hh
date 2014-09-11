@@ -16,15 +16,15 @@
 #ifndef LPC_LINE_CLUSTER_ALGORITHM_HH
 #define LPC_LINE_CLUSTER_ALGORITHM_HH
 
-#include "LpcmRec/LpcAbsClusterAlgorithm.hh"
+#include "LACE/LpcAbsClusterAlgorithm.hh"
 
-#include "LpcmRec/LpcBinRange.hh"
-#include "LpcmRec/LpcClusterData.hh"
-#include "LpcmRec/LpcFunctions.hh"
-#include "LpcmRec/LpcLineFitter.hh"
-#include "LpcmRec/LpcLineSegment.hh"
-#include "LpcmRec/LpcPoint.hh"
-#include "LpcmRec/LpcResiduals.hh"
+#include "LACE/LpcBinRange.hh"
+#include "LACE/LpcClusterData.hh"
+#include "LACE/LpcFunctions.hh"
+#include "LACE/LpcLineFitter.hh"
+#include "LACE/LpcLineSegment.hh"
+#include "LACE/LpcPoint.hh"
+#include "LACE/LpcResiduals.hh"
 
 #include <Eigen/Dense>
 #include <map>

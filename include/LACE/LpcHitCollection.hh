@@ -16,7 +16,7 @@
 #ifndef LPC_HIT_COLLECTION_HH
 #define LPC_HIT_COLLECTION_HH
 
-#include "LpcmRec/LpcPoint.hh"
+#include "LACE/LpcPoint.hh"
 
 #include <Eigen/Dense>
 #include <vector>

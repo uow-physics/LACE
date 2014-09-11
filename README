@@ -1,6 +1,6 @@
 /////////////////////////////////////////////////////////
 ///                                                   ///
-///       README of the LpcmRec package               ///
+///       README of the LACE package                  ///
 ///                                                   ///
 ///  Contact: John Back (J.J.Back@warwick.ac.uk)      ///
 ///                                                   ///
@@ -9,10 +9,10 @@
 Introduction
 ------------
 
-This package (Local Principal Curve Methods for REConstruction)
-is a C++ implementation of the local principal 
-curve (Lpc) algorithm described in Eur. Phys. J. C (2014) 74:2832,
-also available on the arXiv: http://arxiv.org/abs/1312.6059.
+This package (Lpc Algorithm in a C++ Environment) is a C++ 
+implementation of the local principal curve (Lpc) algorithm 
+described in Eur. Phys. J. C (2014) 74:2832, also available 
+on the arXiv: http://arxiv.org/abs/1312.6059. 
 It is based on the R-code package "LPCM"
 http://cran.r-project.org/web/packages/LPCM/index.html,
 written by Jochen Einbeck and Ludger Evers.
@@ -48,24 +48,24 @@ build using make:
 make
 
 If successful, this should create a shared library 
-"lib/libLpcmRec.so" as well as the binary program "bin/LpcmRecMain",
-which is based on the example LpcmRecMain.cc file in the base
-LpcmRec directory.
+"lib/libLACE.so" as well as the binary program "bin/LACEMain",
+which is based on the example LACEMain.cc file in the base
+LACE directory.
 
 The file pathlib.sh gives an example of setting the
-LD_LIBRARY_PATH environment variable to include the LpcmRec
+LD_LIBRARY_PATH environment variable to include the LACE
 shared library.
 
 
 Running the code
 ----------------
 
-The example program "bin/LpcmRecMain" can be used to run the 
-LpcmRec code. It takes one extra argument on the command line, 
+The example program "bin/LACEMain" can be used to run the 
+LACE code. It takes one extra argument on the command line, 
 which specifies the name of the Lpc parameter file
 
 cd example
-../bin/LpcmRecMain mupPars.txt
+../bin/LACEMain mupPars.txt
 
 An example of ten 770 MeV neutrino to muon-proton 
 events is provided in the mup770MeV.txt file, which is
@@ -145,7 +145,7 @@ Doxygen system (http://www.doxygen.org). Simply type
 
 doxygen
 
-in the main LpcmRec directory to create a doxygen sub-directory 
+in the main LACE directory to create a doxygen sub-directory 
 containing a html-based interface to the description of classes 
 and all of their functions and variables (doxygen/html/index.html).
 
@@ -153,8 +153,9 @@ and all of their functions and variables (doxygen/html/index.html).
 License
 -------
 
-This software is distributed under the Boost Software License, Version 1
-(Aug 17 2003). See LICENSE_1_0.txt for details. 
+This software is distributed under the Boost Software License, Version 1,
+(Aug 17 2003). See LICENSE_1_0.txt (http://www.boost.org/LICENSE_1_0.txt)
+for details.
 
 
 Authors and contributors
@@ -168,6 +169,7 @@ Gary Barker
 Steve Boyd
 Daniel Brunt
 Jochen Einbeck
+Ludger Evers
 Martin Haigh
 Harmanjeet Khera
 Ben Morgan
