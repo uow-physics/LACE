@@ -1,0 +1,4 @@
+<map id="LpcAbsClusterAlgorithm" name="LpcAbsClusterAlgorithm">
+<area shape="rect" href="$classLpcLineClusterAlgorithm.html" title="Class that defines the (extended) line vertexing algorithm." alt="" coords="5,235,197,808"/>
+<area shape="rect" href="$classLpcSingleClusterAlgorithm.html" title="Class that creates one cluster by including all hits." alt="" coords="221,431,424,612"/>
+</map>

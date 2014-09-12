@@ -1,0 +1,4 @@
+<map id="include/LACE/LpcInputFactory.hh" name="include/LACE/LpcInputFactory.hh">
+<area shape="rect" href="$LpcInputFactory_8cc.html" title="Class to select the required LpcAbsInput implementation." alt="" coords="5,83,160,112"/>
+<area shape="rect" href="$LpcRun_8cc.html" title="Class to run the overall lpc algorithm with a given input dataset." alt="" coords="184,83,288,112"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="LpcBranchAlgorithm" name="LpcBranchAlgorithm">
+<area shape="rect" href="$classLpcPoint.html" title="Class that defines the scaled and unscaled co&#45;ordinates of a point in the LpcAbsCurve." alt="" coords="153,80,295,411"/>
+<area shape="rect" href="$classLpcHitCollection.html" title="Class used to define a collection of hit pointers." alt="" coords="151,552,297,1032"/>
+<area shape="rect" href="$classLpcAlgorithm.html" title="Class that follows the scaled data points to find the lpc." alt="" coords="321,571,447,1013"/>
+<area shape="rect" href="$classLpcParameters.html" title="Class used to define the parameters for the lpc algorithm." alt="" coords="345,5,500,485"/>
+<area shape="rect" href="$classLpcFunctions.html" title="Class containing various functions used by other classes." alt="" coords="533,108,701,383"/>
+</map>

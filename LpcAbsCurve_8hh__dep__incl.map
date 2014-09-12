@@ -1,0 +1,18 @@
+<map id="include/LACE/LpcAbsCurve.hh" name="include/LACE/LpcAbsCurve.hh">
+<area shape="rect" href="$LpcBranch_8hh.html" title="File containing the declaration of the LpcBranch class." alt="" coords="653,83,837,112"/>
+<area shape="rect" href="$LpcFeatures_8cc.html" title="Class containing the processing steps to find features for a given lpc." alt="" coords="357,160,491,189"/>
+<area shape="rect" href="$LpcLineClusterAlgorithm_8cc.html" title="Class that defines the (extended) line vertexing algorithm." alt="" coords="515,160,717,189"/>
+<area shape="rect" href="$LpcRootOutput_8cc.html" title="Class to write out the results of the lpc algorithm into a ROOT file." alt="" coords="741,160,891,189"/>
+<area shape="rect" href="$LpcTextOutput_8cc.html" title="Class to write out the results of the lpc algorithm into a text file." alt="" coords="915,160,1061,189"/>
+<area shape="rect" href="$LpcCurve_8hh.html" title="File containing the declaration of the LpcCurve class." alt="" coords="1085,83,1264,112"/>
+<area shape="rect" href="$LpcAbsCurve_8cc.html" title="Class that defines an abstract local principal curve." alt="" coords="1288,83,1427,112"/>
+<area shape="rect" href="$LpcBranch_8cc.html" title="Class that stores the result of a branch of the local principal curve." alt="" coords="211,160,333,189"/>
+<area shape="rect" href="$LpcBranchAlgorithm_8cc.html" title="Class that finds possible branches for the lpc." alt="" coords="1085,160,1264,189"/>
+<area shape="rect" href="$LpcBranchCollection_8cc.html" title="Class that stores a series of branches for the main principal curve." alt="" coords="5,160,187,189"/>
+<area shape="rect" href="$LpcAbsOutput_8cc.html" title="Abstract class to store the results of the lpc algorithm." alt="" coords="1821,160,1965,189"/>
+<area shape="rect" href="$LpcAlgorithm_8cc.html" title="Class that follows the scaled data points to find the lpc." alt="" coords="1989,160,2125,189"/>
+<area shape="rect" href="$LpcCurve_8cc.html" title="Class that stores the result of the local principal curve." alt="" coords="2149,160,2267,189"/>
+<area shape="rect" href="$LpcEvent_8cc.html" title="Class used to define an event, which contains a collection of hit pointers." alt="" coords="1288,160,1403,189"/>
+<area shape="rect" href="$LpcProcess_8cc.html" title="Class defining the process of finding curves for events." alt="" coords="1427,160,1557,189"/>
+<area shape="rect" href="$LpcSingleClusterAlgorithm_8cc.html" title="Class that creates simple clusters by just including all hits." alt="" coords="1581,160,1797,189"/>
+</map>

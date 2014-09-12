@@ -1,0 +1,11 @@
+<map id="src/LpcFeatures.cc" name="src/LpcFeatures.cc">
+<area shape="rect" href="$LpcFeatures_8hh.html" title="File containing the declaration of the LpcFeatures class." alt="" coords="5856,187,6005,216"/>
+<area shape="rect" href="$LpcAbsCurve_8hh.html" title="File containing the declaration of the LpcAbsCurve class." alt="" coords="4296,187,4451,216"/>
+<area shape="rect" href="$LpcPoint_8hh.html" title="File containing the declaration of the LpcPoint class." alt="" coords="32,283,160,312"/>
+<area shape="rect" href="$LpcBranch_8hh.html" title="File containing the declaration of the LpcBranch class." alt="" coords="6024,109,6163,139"/>
+<area shape="rect" href="$LpcBranchCollection_8hh.html" title="File containing the declaration of the LpcBranchCollection class." alt="" coords="6131,187,6328,216"/>
+<area shape="rect" href="$LpcCurve_8hh.html" title="File containing the declaration of the LpcCurve class." alt="" coords="5867,109,6000,139"/>
+<area shape="rect" href="$LpcParameters_8hh.html" title="File containing the declaration of the LpcParameters class." alt="" coords="6504,187,6667,216"/>
+<area shape="rect" href="$LpcBinRange_8hh.html" title="File containing the declaration of the LpcBinRange class." alt="" coords="5984,283,6139,312"/>
+<area shape="rect" href="$LpcPathLength_8hh.html" title="File containing the declaration of the LpcPathLength class." alt="" coords="6293,283,6456,312"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="LpcAbsOutput" name="LpcAbsOutput">
+<area shape="rect" href="$classLpcRootOutput.html" title="Class to write out the results of the lpc algorithm into a ROOT file." alt="" coords="5,440,149,1013"/>
+<area shape="rect" href="$classLpcTextOutput.html" title="Class to write out the results of the lpc algorithm into a text file." alt="" coords="173,487,317,967"/>
+</map>

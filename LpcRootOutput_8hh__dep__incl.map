@@ -1,0 +1,4 @@
+<map id="include/LACE/LpcRootOutput.hh" name="include/LACE/LpcRootOutput.hh">
+<area shape="rect" href="$LpcOutputFactory_8cc.html" title="Class to select the required LpcAbsOutput implementation." alt="" coords="5,83,171,112"/>
+<area shape="rect" href="$LpcRootOutput_8cc.html" title="Class to write out the results of the lpc algorithm into a ROOT file." alt="" coords="195,83,344,112"/>
+</map>

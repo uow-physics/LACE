@@ -1,0 +1,6 @@
+<map id="include/LACE/LpcAlgorithm.hh" name="include/LACE/LpcAlgorithm.hh">
+<area shape="rect" href="$LpcBranchAlgorithm_8hh.html" title="File containing the declaration of the LpcBranchAlgorithm class." alt="" coords="5,83,245,112"/>
+<area shape="rect" href="$LpcProcess_8cc.html" title="Class defining the process of finding curves for events." alt="" coords="217,160,348,189"/>
+<area shape="rect" href="$LpcAlgorithm_8cc.html" title="Class that follows the scaled data points to find the lpc." alt="" coords="320,83,456,112"/>
+<area shape="rect" href="$LpcBranchAlgorithm_8cc.html" title="Class that finds possible branches for the lpc." alt="" coords="15,160,193,189"/>
+</map>

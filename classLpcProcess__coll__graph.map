@@ -1,0 +1,11 @@
+<map id="LpcProcess" name="LpcProcess">
+<area shape="rect" href="$classLpcAbsClusterAlgorithm.html" title="Class that defines the abstract vertex &amp; cluster algorithm interface." alt="" coords="5,1093,195,1275"/>
+<area shape="rect" href="$classLpcParameters.html" title="Class used to define the parameters for the lpc algorithm." alt="" coords="304,5,459,485"/>
+<area shape="rect" href="$classLpcBranchAlgorithm.html" title="Class that follows the scaled data points to find lpc branches." alt="" coords="659,1336,827,1779"/>
+<area shape="rect" href="$classLpcAlgorithm.html" title="Class that follows the scaled data points to find the lpc." alt="" coords="848,571,973,1013"/>
+<area shape="rect" href="$classLpcShowerAlgorithm.html" title="Class that defines the shower algorithm." alt="" coords="201,1056,369,1312"/>
+<area shape="rect" href="$classLpcFeatures.html" title="Class containing the processing steps to find features for a given lpc." alt="" coords="437,1355,597,1760"/>
+<area shape="rect" href="$classLpcPoint.html" title="Class that defines the scaled and unscaled co&#45;ordinates of a point in the LpcAbsCurve." alt="" coords="687,80,828,411"/>
+<area shape="rect" href="$classLpcHitCollection.html" title="Class used to define a collection of hit pointers." alt="" coords="563,552,709,1032"/>
+<area shape="rect" href="$classLpcFunctions.html" title="Class containing various functions used by other classes." alt="" coords="852,108,1020,383"/>
+</map>

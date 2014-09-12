@@ -1,0 +1,8 @@
+<map id="LpcCurve" name="LpcCurve">
+<area shape="rect" href="$classLpcAbsCurve.html" title="Class that defines an abstract local principal curve." alt="" coords="212,968,351,1504"/>
+<area shape="rect" href="$classLpcPathLength.html" title="Class used to define a series of pathlengths along the lpc." alt="" coords="5,403,181,901"/>
+<area shape="rect" href="$classLpcPoint.html" title="Class that defines the scaled and unscaled co&#45;ordinates of a point in the LpcAbsCurve." alt="" coords="211,5,352,336"/>
+<area shape="rect" href="$classLpcHitCollection.html" title="Class used to define a collection of hit pointers." alt="" coords="320,412,467,892"/>
+<area shape="rect" href="$classLpcResiduals.html" title="Class that stores the lpc&#45;to&#45;hit residuals." alt="" coords="491,440,685,864"/>
+<area shape="rect" href="$classLpcBranchCollection.html" title="Class that stores a series of branches for the main principal curve." alt="" coords="375,1117,543,1355"/>
+</map>

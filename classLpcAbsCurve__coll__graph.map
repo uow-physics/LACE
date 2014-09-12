@@ -1,0 +1,6 @@
+<map id="LpcAbsCurve" name="LpcAbsCurve">
+<area shape="rect" href="$classLpcPathLength.html" title="Class used to define a series of pathlengths along the lpc." alt="" coords="5,403,181,901"/>
+<area shape="rect" href="$classLpcPoint.html" title="Class that defines the scaled and unscaled co&#45;ordinates of a point in the LpcAbsCurve." alt="" coords="211,5,352,336"/>
+<area shape="rect" href="$classLpcHitCollection.html" title="Class used to define a collection of hit pointers." alt="" coords="320,412,467,892"/>
+<area shape="rect" href="$classLpcResiduals.html" title="Class that stores the lpc&#45;to&#45;hit residuals." alt="" coords="491,440,685,864"/>
+</map>

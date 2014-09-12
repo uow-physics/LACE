@@ -1,0 +1,15 @@
+<map id="LpcRun" name="LpcRun">
+<area shape="rect" href="$classLpcAbsInput.html" title="Pure abstract class to read in a dataset of hits (point cloud)" alt="" coords="81,2013,225,2325"/>
+<area shape="rect" href="$classLpcAbsOutput.html" title="Abstract class to store the results of the lpc algorithm." alt="" coords="249,1995,404,2344"/>
+<area shape="rect" href="$classLpcEvent.html" title="Class used to define an event containing hits, curves, clusters and vertices." alt="" coords="5,1523,139,1891"/>
+<area shape="rect" href="$classLpcHitCollection.html" title="Class used to define a collection of hit pointers." alt="" coords="109,552,256,1032"/>
+<area shape="rect" href="$classLpcBranchAlgorithm.html" title="Class that follows the scaled data points to find lpc branches." alt="" coords="335,1485,503,1928"/>
+<area shape="rect" href="$classLpcPoint.html" title="Class that defines the scaled and unscaled co&#45;ordinates of a point in the LpcAbsCurve." alt="" coords="233,80,375,411"/>
+<area shape="rect" href="$classLpcAlgorithm.html" title="Class that follows the scaled data points to find the lpc." alt="" coords="507,571,632,1013"/>
+<area shape="rect" href="$classLpcParameters.html" title="Class used to define the parameters for the lpc algorithm." alt="" coords="751,5,905,485"/>
+<area shape="rect" href="$classLpcAbsClusterAlgorithm.html" title="Class that defines the abstract vertex &amp; cluster algorithm interface." alt="" coords="785,1168,975,1349"/>
+<area shape="rect" href="$classLpcShowerAlgorithm.html" title="Class that defines the shower algorithm." alt="" coords="981,1131,1149,1387"/>
+<area shape="rect" href="$classLpcFeatures.html" title="Class containing the processing steps to find features for a given lpc." alt="" coords="619,1056,779,1461"/>
+<area shape="rect" href="$classLpcProcess.html" title="Class containing the processing steps to obtain lpc curves for events." alt="" coords="567,2032,697,2307"/>
+<area shape="rect" href="$classLpcFunctions.html" title="Class containing various functions used by other classes." alt="" coords="403,108,571,383"/>
+</map>

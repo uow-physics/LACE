@@ -1,0 +1,10 @@
+<map id="include/LACE/LpcHit.hh" name="include/LACE/LpcHit.hh">
+<area shape="rect" href="$LpcCluster_8cc.html" title="Class that defines an lpc cluster object." alt="" coords="5,83,128,112"/>
+<area shape="rect" href="$LpcHit_8cc.html" title="Class used to define a hit in the dataset or point cloud." alt="" coords="152,83,251,112"/>
+<area shape="rect" href="$LpcHitCollection_8cc.html" title="Class used to define a collection of hit pointers." alt="" coords="275,83,432,112"/>
+<area shape="rect" href="$LpcLineClusterAlgorithm_8cc.html" title="Class that defines the (extended) line vertexing algorithm." alt="" coords="456,83,659,112"/>
+<area shape="rect" href="$LpcRootInput_8cc.html" title="Class to read in a ROOT file containing a dataset of hits (point cloud)" alt="" coords="683,83,821,112"/>
+<area shape="rect" href="$LpcRootOutput_8cc.html" title="Class to write out the results of the lpc algorithm into a ROOT file." alt="" coords="845,83,995,112"/>
+<area shape="rect" href="$LpcSingleClusterAlgorithm_8cc.html" title="Class that creates simple clusters by just including all hits." alt="" coords="1019,83,1235,112"/>
+<area shape="rect" href="$LpcTextInput_8cc.html" title="Class to read in an ascii file containing a dataset of hits (point cloud)" alt="" coords="1259,83,1395,112"/>
+</map>

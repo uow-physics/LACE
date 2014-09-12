@@ -1,0 +1,4 @@
+<map id="LpcAbsCurve" name="LpcAbsCurve">
+<area shape="rect" href="$classLpcBranch.html" title="Class that stores the result of a branch of the main principal curve." alt="" coords="5,599,117,761"/>
+<area shape="rect" href="$classLpcCurve.html" title="Class that stores the main principal curve, keeping track of any branches." alt="" coords="141,571,299,789"/>
+</map>

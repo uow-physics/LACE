@@ -1,0 +1,16 @@
+<map id="include/LACE/LpcFunctions.hh" name="include/LACE/LpcFunctions.hh">
+<area shape="rect" href="$LpcAlgorithm_8hh.html" title="File containing the declaration of the LpcAlgorithm class." alt="" coords="205,92,403,121"/>
+<area shape="rect" href="$LpcBranchAlgorithm_8hh.html" title="File containing the declaration of the LpcBranchAlgorithm class." alt="" coords="5,179,245,208"/>
+<area shape="rect" href="$LpcConvexHull_8hh.html" title="File containing the declaration of the LpcConvexHull class." alt="" coords="495,92,705,121"/>
+<area shape="rect" href="$LpcLineClusterAlgorithm_8hh.html" title="File containing the declaration of the LpcLineClusterAlgorithm class." alt="" coords="729,83,921,131"/>
+<area shape="rect" href="$LpcCluster_8cc.html" title="Class that defines an lpc cluster object." alt="" coords="945,92,1068,121"/>
+<area shape="rect" href="$LpcFunctions_8cc.html" title="Class containing various functions used by other classes." alt="" coords="1092,92,1231,121"/>
+<area shape="rect" href="$LpcHitCollection_8cc.html" title="Class used to define a collection of hit pointers." alt="" coords="1255,92,1412,121"/>
+<area shape="rect" href="$LpcLineFitter_8cc.html" title="Class that calculates the regression best fit line through a set of data points." alt="" coords="1436,92,1572,121"/>
+<area shape="rect" href="$LpcProcess_8cc.html" title="Class defining the process of finding curves for events." alt="" coords="228,256,359,285"/>
+<area shape="rect" href="$LpcAlgorithm_8cc.html" title="Class that follows the scaled data points to find the lpc." alt="" coords="320,179,456,208"/>
+<area shape="rect" href="$LpcBranchAlgorithm_8cc.html" title="Class that finds possible branches for the lpc." alt="" coords="25,256,204,285"/>
+<area shape="rect" href="$LpcConvexHull_8cc.html" title="Class that calculates the &quot;convex hull&quot; extent of a cluster of hits." alt="" coords="480,179,629,208"/>
+<area shape="rect" href="$LpcShowerAlgorithm_8cc.html" title="Class that defines the shower algorithm." alt="" coords="653,179,835,208"/>
+<area shape="rect" href="$LpcLineClusterAlgorithm_8cc.html" title="Class that defines the (extended) line vertexing algorithm." alt="" coords="909,179,1112,208"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="include/LACE/LpcBranchCollection.hh" name="include/LACE/LpcBranchCollection.hh">
+<area shape="rect" href="$LpcBranchAlgorithm_8cc.html" title="Class that finds possible branches for the lpc." alt="" coords="5,83,184,112"/>
+<area shape="rect" href="$LpcBranchCollection_8cc.html" title="Class that stores a series of branches for the main principal curve." alt="" coords="208,83,389,112"/>
+<area shape="rect" href="$LpcCurve_8cc.html" title="Class that stores the result of the local principal curve." alt="" coords="413,83,531,112"/>
+<area shape="rect" href="$LpcFeatures_8cc.html" title="Class containing the processing steps to find features for a given lpc." alt="" coords="555,83,688,112"/>
+<area shape="rect" href="$LpcLineClusterAlgorithm_8cc.html" title="Class that defines the (extended) line vertexing algorithm." alt="" coords="712,83,915,112"/>
+<area shape="rect" href="$LpcProcess_8cc.html" title="Class defining the process of finding curves for events." alt="" coords="939,83,1069,112"/>
+<area shape="rect" href="$LpcRootOutput_8cc.html" title="Class to write out the results of the lpc algorithm into a ROOT file." alt="" coords="1093,83,1243,112"/>
+<area shape="rect" href="$LpcTextOutput_8cc.html" title="Class to write out the results of the lpc algorithm into a text file." alt="" coords="1267,83,1413,112"/>
+</map>

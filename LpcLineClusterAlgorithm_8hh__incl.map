@@ -1,0 +1,10 @@
+<map id="include/LACE/LpcLineClusterAlgorithm.hh" name="include/LACE/LpcLineClusterAlgorithm.hh">
+<area shape="rect" href="$LpcAbsClusterAlgorithm_8hh.html" title="File containing the declaration of the LpcAbsClusterAlgorithm class." alt="" coords="5,101,224,131"/>
+<area shape="rect" href="$LpcClusterData_8hh.html" title="File containing the declaration of the LpcClusterData class." alt="" coords="173,179,341,208"/>
+<area shape="rect" href="$LpcBinRange_8hh.html" title="File containing the declaration of the LpcBinRange class." alt="" coords="477,101,632,131"/>
+<area shape="rect" href="$LpcFunctions_8hh.html" title="File containing the declaration of the LpcFunctions class." alt="" coords="853,101,1008,131"/>
+<area shape="rect" href="$LpcLineFitter_8hh.html" title="File containing the declaration of the LpcLineFitter class." alt="" coords="1083,101,1235,131"/>
+<area shape="rect" href="$LpcLineSegment_8hh.html" title="File containing the declaration of the LpcLineSegment class." alt="" coords="656,101,829,131"/>
+<area shape="rect" href="$LpcPoint_8hh.html" title="File containing the declaration of the LpcPoint class." alt="" coords="1259,101,1387,131"/>
+<area shape="rect" href="$LpcResiduals_8hh.html" title="File containing the declaration of the LpcResiduals class." alt="" coords="299,101,453,131"/>
+</map>

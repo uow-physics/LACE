@@ -1,0 +1,13 @@
+<map id="include/LACE/LpcHitCollection.hh" name="include/LACE/LpcHitCollection.hh">
+<area shape="rect" href="$LpcAbsCurve_8cc.html" title="Class that defines an abstract local principal curve." alt="" coords="5,83,144,112"/>
+<area shape="rect" href="$LpcAbsOutput_8cc.html" title="Abstract class to store the results of the lpc algorithm." alt="" coords="168,83,312,112"/>
+<area shape="rect" href="$LpcAlgorithm_8cc.html" title="Class that follows the scaled data points to find the lpc." alt="" coords="336,83,472,112"/>
+<area shape="rect" href="$LpcBranchAlgorithm_8cc.html" title="Class that finds possible branches for the lpc." alt="" coords="496,83,675,112"/>
+<area shape="rect" href="$LpcEvent_8cc.html" title="Class used to define an event, which contains a collection of hit pointers." alt="" coords="699,83,813,112"/>
+<area shape="rect" href="$LpcHitCollection_8cc.html" title="Class used to define a collection of hit pointers." alt="" coords="837,83,995,112"/>
+<area shape="rect" href="$LpcLineClusterAlgorithm_8cc.html" title="Class that defines the (extended) line vertexing algorithm." alt="" coords="1019,83,1221,112"/>
+<area shape="rect" href="$LpcRootInput_8cc.html" title="Class to read in a ROOT file containing a dataset of hits (point cloud)" alt="" coords="1245,83,1384,112"/>
+<area shape="rect" href="$LpcRootOutput_8cc.html" title="Class to write out the results of the lpc algorithm into a ROOT file." alt="" coords="1408,83,1557,112"/>
+<area shape="rect" href="$LpcSingleClusterAlgorithm_8cc.html" title="Class that creates simple clusters by just including all hits." alt="" coords="1581,83,1797,112"/>
+<area shape="rect" href="$LpcTextInput_8cc.html" title="Class to read in an ascii file containing a dataset of hits (point cloud)" alt="" coords="1821,83,1957,112"/>
+</map>

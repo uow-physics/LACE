@@ -1,0 +1,6 @@
+<map id="include/LACE/LpcLineSegment.hh" name="include/LACE/LpcLineSegment.hh">
+<area shape="rect" href="$LpcLineClusterAlgorithm_8hh.html" title="File containing the declaration of the LpcLineClusterAlgorithm class." alt="" coords="105,83,297,131"/>
+<area shape="rect" href="$LpcLineSegment_8cc.html" title="Class that defines the line segments used for vertexing/clustering." alt="" coords="321,92,479,121"/>
+<area shape="rect" href="$LpcLineClusterAlgorithm_8cc.html" title="Class that defines the (extended) line vertexing algorithm." alt="" coords="5,179,208,208"/>
+<area shape="rect" href="$LpcProcess_8cc.html" title="Class defining the process of finding curves for events." alt="" coords="232,179,363,208"/>
+</map>

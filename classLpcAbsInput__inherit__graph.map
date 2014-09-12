@@ -1,0 +1,4 @@
+<map id="LpcAbsInput" name="LpcAbsInput">
+<area shape="rect" href="$classLpcRootInput.html" title="Class to read in a ROOT file containing a dataset of hits (point cloud)" alt="" coords="5,365,133,864"/>
+<area shape="rect" href="$classLpcTextInput.html" title="Class to read in an ascii file containing a dataset of hits (point cloud)" alt="" coords="157,449,315,780"/>
+</map>

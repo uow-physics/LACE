@@ -1,0 +1,32 @@
+# Example lpc parameter file for 10 muon proton events
+infile mup770MeV.txt
+informat text
+outfile mup770MeVLpcOutput.txt
+outformat text
+
+kernelwidth 0.056
+stepsize 0.040
+npoints 150
+penalisation 2.0
+eigenratio 0.4
+boundary 0.005
+convergence 1.0e-6
+branchlevel 0
+gapsize 1.5
+
+peakfinder 1
+cosanglecut 0.01
+minpeakfrac 0.01
+peakdiffsq 3.0
+
+clustering 1
+dobranchvtx 0
+minvtxrescut 20.0
+
+convexhull 0.12
+showerres 20.0
+showerresratio 0.3
+showerresfrac 0.9
+
+firstevent 0
+lastevent 9

@@ -1,0 +1,4 @@
+<map id="include/LACE/LpcRootInput.hh" name="include/LACE/LpcRootInput.hh">
+<area shape="rect" href="$LpcInputFactory_8cc.html" title="Class to select the required LpcAbsInput implementation." alt="" coords="5,83,160,112"/>
+<area shape="rect" href="$LpcRootInput_8cc.html" title="Class to read in a ROOT file containing a dataset of hits (point cloud)" alt="" coords="184,83,323,112"/>
+</map>

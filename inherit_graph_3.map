@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" href="$classLpcAbsOutput.html" title="Abstract class to store the results of the lpc algorithm." alt="" coords="5,32,109,61"/>
+<area shape="rect" href="$classLpcRootOutput.html" title="Class to write out the results of the lpc algorithm into a ROOT file." alt="" coords="157,5,267,35"/>
+<area shape="rect" href="$classLpcTextOutput.html" title="Class to write out the results of the lpc algorithm into a text file." alt="" coords="159,59,265,88"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="include/LACE/LpcClusterData.hh" name="include/LACE/LpcClusterData.hh">
+<area shape="rect" href="$LpcAbsClusterAlgorithm_8hh.html" title="File containing the declaration of the LpcAbsClusterAlgorithm class." alt="" coords="335,83,524,131"/>
+<area shape="rect" href="$LpcLineClusterAlgorithm_8hh.html" title="File containing the declaration of the LpcLineClusterAlgorithm class." alt="" coords="68,179,260,227"/>
+<area shape="rect" href="$LpcProcess_8cc.html" title="Class defining the process of finding curves for events." alt="" coords="232,275,363,304"/>
+<area shape="rect" href="$LpcSingleClusterAlgorithm_8hh.html" title="File containing the declaration of the LpcSingleClusterAlgorithm class." alt="" coords="364,179,567,227"/>
+<area shape="rect" href="$LpcClusterData_8cc.html" title="Class that is a container of the LpcCluster and LpcVertex pointers from clustering." alt="" coords="599,92,751,121"/>
+<area shape="rect" href="$LpcLineClusterAlgorithm_8cc.html" title="Class that defines the (extended) line vertexing algorithm." alt="" coords="5,275,208,304"/>
+<area shape="rect" href="$LpcSingleClusterAlgorithm_8cc.html" title="Class that creates simple clusters by just including all hits." alt="" coords="387,275,603,304"/>
+</map>

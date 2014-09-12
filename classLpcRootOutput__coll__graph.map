@@ -1,0 +1,6 @@
+<map id="LpcRootOutput" name="LpcRootOutput">
+<area shape="rect" href="$classLpcAbsOutput.html" title="Abstract class to store the results of the lpc algorithm." alt="" coords="27,1384,181,1733"/>
+<area shape="rect" href="$classLpcEvent.html" title="Class used to define an event containing hits, curves, clusters and vertices." alt="" coords="135,949,268,1317"/>
+<area shape="rect" href="$classLpcHitCollection.html" title="Class used to define a collection of hit pointers." alt="" coords="5,403,152,883"/>
+<area shape="rect" href="$classLpcPoint.html" title="Class that defines the scaled and unscaled co&#45;ordinates of a point in the LpcAbsCurve." alt="" coords="8,5,149,336"/>
+</map>
