@@ -24,6 +24,8 @@ then be retrieved from each LpcEvent.
 Further online documentation is available at
 http://universityofwarwick.github.io/LACE
 
+[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.11708.png)]
+(http://dx.doi.org/10.5281/zenodo.11708)
 
 Building the code
 -----------------
