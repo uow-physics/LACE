@@ -142,6 +142,8 @@ starts at 1 (generation of zero means no branches, or just the main curve).
 Code documentation
 ------------------
 
+Online documentation is available at http://universityofwarwick.github.io/LACE
+
 Automatic code documentation can be generated using the
 Doxygen system (http://www.doxygen.org). Simply run doxygen
 
@@ -158,7 +160,8 @@ License
 -------
 
 This software is distributed under the Boost Software License, Version 1,
-(Aug 17 2003). See [LICENSE_1_0.txt](LICENSE_1_0.txt) (optionally the original at http://www.boost.org/LICENSE_1_0.txt)
+(Aug 17 2003). See [LICENSE_1_0.txt](LICENSE_1_0.txt) 
+(optionally the original at http://www.boost.org/LICENSE_1_0.txt)
 for details.
 
 
