@@ -47,7 +47,7 @@ $ make
 
 If successful, this should create a shared library 
 `lib/libLACE.so` as well as the binary program `bin/LACEMain`,
-which is based on the example [LACEMain.cc](LACE/LaceMain.cc) 
+which is based on the example [LACEMain.cc](LaceMain.cc) 
 file in the base LACE directory.
 
 The file [pathlib.sh](pathlib.sh) gives an example of setting the
