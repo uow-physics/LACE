@@ -47,7 +47,7 @@ $ make
 
 If successful, this should create a shared library 
 `lib/libLACE.so` as well as the binary program `bin/LACEMain`,
-which is based on the example [LACEMain.cc](LaceMain.cc) 
+which is based on the example [LACEMain.cc](LACEMain.cc) 
 file in the base LACE directory.
 
 The file [pathlib.sh](pathlib.sh) gives an example of setting the
@@ -68,7 +68,7 @@ $ ../bin/LACEMain mupPars.txt
 ```
 
 An example of ten 770 MeV neutrino to muon-proton 
-events is provided in the [mup770MeV.txt](examples/mup770MeV.txt) 
+events is provided in the [mup770MeV.txt](example/mup770MeV.txt) 
 file, which is text based and contains the following lines:
 
 ```
