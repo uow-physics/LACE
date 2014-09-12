@@ -158,7 +158,7 @@ License
 -------
 
 This software is distributed under the Boost Software License, Version 1,
-(Aug 17 2003). See [LICENSE_1_0.txt](LICENSE_1.0.txt) (optionally the original at http://www.boost.org/LICENSE_1_0.txt)
+(Aug 17 2003). See [LICENSE_1_0.txt](LICENSE_1_0.txt) (optionally the original at http://www.boost.org/LICENSE_1_0.txt)
 for details.
 
 
