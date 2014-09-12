@@ -1,10 +1,6 @@
-/////////////////////////////////////////////////////////
-///                                                   ///
-///       README of the LACE package                  ///
-///                                                   ///
-///  Contact: John Back (J.J.Back@warwick.ac.uk)      ///
-///                                                   ///
-/////////////////////////////////////////////////////////
+README of the LACE package
+==========================
+Contact: John Back (J.J.Back@warwick.ac.uk)
 
 Introduction
 ------------
@@ -44,33 +40,38 @@ Use the configure script to set various compiler options
 ("configure --help" lists the available options), then
 build using make:
 
-./configure
-make
+```sh
+$ ./configure
+$ make
+```
 
 If successful, this should create a shared library 
-"lib/libLACE.so" as well as the binary program "bin/LACEMain",
-which is based on the example LACEMain.cc file in the base
-LACE directory.
+`lib/libLACE.so` as well as the binary program `bin/LACEMain`,
+which is based on the example [LACEMain.cc](LACE/LaceMain.cc) 
+file in the base LACE directory.
 
-The file pathlib.sh gives an example of setting the
-LD_LIBRARY_PATH environment variable to include the LACE
+The file [pathlib.sh](pathlib.sh) gives an example of setting the
+`LD_LIBRARY_PATH` environment variable to include the LACE
 shared library.
 
 
 Running the code
 ----------------
 
-The example program "bin/LACEMain" can be used to run the 
+The example program `bin/LACEMain` can be used to run the 
 LACE code. It takes one extra argument on the command line, 
 which specifies the name of the Lpc parameter file
 
-cd example
-../bin/LACEMain mupPars.txt
+```sh
+$ cd example
+$ ../bin/LACEMain mupPars.txt
+```
 
 An example of ten 770 MeV neutrino to muon-proton 
-events is provided in the mup770MeV.txt file, which is
-text based and contains the following lines:
+events is provided in the [mup770MeV.txt](examples/mup770MeV.txt) 
+file, which is text based and contains the following lines:
 
+```
 NumberOfEvents NumberOfDimensions
 EventNumber1 NumberOfHits1
 HitX1 HitX2 HitX3 HitWeight
@@ -79,16 +80,17 @@ EventNumber2 NumberOfHits2
 HitX1 HitX2 HitX3 HitWeight
 Other hits...
 etc...
-
+```
 
 A description of the lpc parameters are given below, with suggested 
 default values given in parenthesis:
 
+```
 infile          Filename of the input file
 informat        Format for the input file (text or root)
 outfile         Filename of the output file
 outformat       Format for the output file (text or root)
-
+ 
 kernelwidth     Value of the lpc scaled kernel width (0.05)
 stepsize        Scaled step size for the lpc (0.05)
 npoints         Required number of lpc points (250)
@@ -119,7 +121,7 @@ showerresfrac   Minimum fraction of residuals that need to be above the shower t
 
 firstevent      Integer specifying the first event (usually this is set to 0)
 lastevent       Integer specifying the last event (-1 means process all available events)
-
+```
 
 If "firstevent" and "lastevent" are not set, then all events found in the input 
 file are processed.
@@ -141,9 +143,11 @@ Code documentation
 ------------------
 
 Automatic code documentation can be generated using the
-Doxygen system (http://www.doxygen.org). Simply type
+Doxygen system (http://www.doxygen.org). Simply run doxygen
 
-doxygen
+```
+$ doxygen
+```
 
 in the main LACE directory to create a doxygen sub-directory 
 containing a html-based interface to the description of classes 
@@ -154,7 +158,7 @@ License
 -------
 
 This software is distributed under the Boost Software License, Version 1,
-(Aug 17 2003). See LICENSE_1_0.txt (http://www.boost.org/LICENSE_1_0.txt)
+(Aug 17 2003). See [LICENSE_1_0.txt](LICENSE_1.0.txt) (optionally the original at http://www.boost.org/LICENSE_1_0.txt)
 for details.
 
 
@@ -165,16 +169,16 @@ The main author of the C++ version is John Back.
 
 Other contributors to this work are:
 
-Gary Barker
-Steve Boyd
-Daniel Brunt
-Jochen Einbeck
-Ludger Evers
-Martin Haigh
-Harmanjeet Khera
-Ben Morgan
-Ben Oakley
-Yorck Ramachers
-Dan Roythorne
-Jamie Wynn
+* Gary Barker
+* Steve Boyd
+* Daniel Brunt
+* Jochen Einbeck
+* Ludger Evers
+* Martin Haigh
+* Harmanjeet Khera
+* Ben Morgan
+* Ben Oakley
+* Yorck Ramachers
+* Dan Roythorne
+* Jamie Wynn
 
