@@ -21,6 +21,9 @@ weight (e.g. energy or charge). Each collection of hits
 The curves, feature points and any clustering information can 
 then be retrieved from each LpcEvent.
 
+Further online documentation is available at
+http://universityofwarwick.github.io/LACE
+
 
 Building the code
 -----------------
@@ -141,8 +144,6 @@ starts at 1 (generation of zero means no branches, or just the main curve).
 
 Code documentation
 ------------------
-
-Online documentation is available at http://universityofwarwick.github.io/LACE
 
 Automatic code documentation can be generated using the
 Doxygen system (http://www.doxygen.org). Simply run doxygen
