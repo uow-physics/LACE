@@ -468,9 +468,8 @@ void LpcFeatures::getTSpectrumPeaks(const Eigen::VectorXd& absCosArray)
 
     int nLpc = absCosArray.size();
 
-    // Unfortunately, TSpectrum requires float "arrays"...
-    float* source = new float[nLpc];
-    float* destVector = new float[nLpc];
+    double* source = new double[nLpc];
+    double* destVector = new double[nLpc];
     int i(0);
     for (i = 0; i < nLpc; i++) {
 	source[i] = absCosArray(i);
@@ -480,7 +479,7 @@ void LpcFeatures::getTSpectrumPeaks(const Eigen::VectorXd& absCosArray)
     int nPeaks = spectrum.SearchHighRes(source, destVector, nLpc, sigma, threshold, 
 					bkgndRemove, deconIter, markov, avWindow);
 
-    float* xPeaks = spectrum.GetPositionX();
+    double* xPeaks = spectrum.GetPositionX();
 
     // Convert xPeaks to the integer values of the lpc point indices
     for (i = 0; i < nPeaks; i++) {
